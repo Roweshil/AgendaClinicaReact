@@ -1,0 +1,95 @@
+.layout {
+  background-color: rgb(166, 209, 207);
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 12fr 1fr;
+  grid-template-areas: 
+    "header"
+    "viewport"
+    "footer";
+  font-family: sans-serif;
+}
+
+.header {
+  background-color: aliceblue;
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-bottom: 1px solid black;
+}
+
+.header nav {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.public-dashboard {
+  grid-area: viewport;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-dashboard {
+  grid-area: viewport;
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+}
+
+.medico-dashboard {
+  grid-area: viewport;
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+}
+
+.sidebar {
+  background-color: rgb(182, 194, 204);
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid black;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  gap: 5rem;
+}
+
+.sidebar ul li {
+  color: black;
+  border: 1px solid rgb(47, 179, 212);
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.content {
+  background-color: rgb(73, 114, 148);
+  height: 100%;
+  padding: 2rem;
+}
+
+.footer {
+  font-size: small;
+  grid-area: footer;
+  background-color: rgb(200, 205, 209);
+}
+
+.footer nav {
+  border-top: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
+}
+
