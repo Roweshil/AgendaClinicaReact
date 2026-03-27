@@ -12,7 +12,7 @@ export function Header() {
 
     const logout = async () => {
         try {
-            await fetch("http://localhost:3050/api/auth/logout", {
+            await fetch(`${import.meta.env.VITE_API_URL}/api/auth/logout`, {
             method: "POST",
             credentials: "include"
             })

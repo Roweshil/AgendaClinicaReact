@@ -40,7 +40,7 @@ export function ActualizarCita() {
 
         if (citaEditando) {
             // actualizar cita existente
-            const res = await fetch(`/api/citas/${citaEditando}`, {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/citas/${citaEditando}`, {
                 method: 'PUT',
                 credentials: 'include',
                 headers: { 'Content-Type': 'application/json' },
@@ -54,7 +54,7 @@ export function ActualizarCita() {
             }
         } else {
             // Crear medico nuevo si no existe ID
-            const res = await fetch('/api/medicos', {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/medicos`, {
                 method: 'POST',
                 credentials: 'include',
                 headers: { 'Content-Type': 'application/json' },

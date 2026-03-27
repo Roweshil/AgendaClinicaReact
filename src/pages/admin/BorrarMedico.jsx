@@ -5,7 +5,7 @@ export function BorrarMedico() {
     const { medicos, setMedicos } = useAdmin()
 
     const borrarMedico = async (id) => {
-        const res = await fetch(`http://localhost:3050/api/admin/borrar/${id}` , {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/borrar/${id}` , {
             method: "DELETE",
             credentials: "include"
         })

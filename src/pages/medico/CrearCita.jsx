@@ -26,7 +26,7 @@ export function CrearCita() {
     const crearCita = async (e) => {
         e.preventDefault()
 
-        const res = await fetch("http://localhost:3050/api/medico/citas/crear", {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/medico/citas/crear`, {
             method: "POST",
             credentials: "include",
             headers: {

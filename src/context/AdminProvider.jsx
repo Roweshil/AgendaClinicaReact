@@ -9,7 +9,7 @@ export function AdminProvider ({ children }) {
 
   useEffect(() => {
     const getMedicos = async () => {
-        const res = await fetch("http://localhost:3050/api/admin/consulta/", {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/consulta/`, {
             credentials: "include"
         })
 

@@ -5,7 +5,7 @@ export function BorrarCita() {
     const { citas, setCitas } = useMedico()
 
     const borrarCita = async (id) => {
-        const res = await fetch(`http://localhost:3050/api/medico/citas/eliminar/${id}` , {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/medico/citas/eliminar/${id}` , {
             method: "DELETE",
             credentials: "include"
         })

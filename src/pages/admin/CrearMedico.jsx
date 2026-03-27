@@ -24,7 +24,7 @@ export function CrearMedico() {
     const crearMedico = async (e) => {
         e.preventDefault()
 
-        const res = await fetch("http://localhost:3050/api/admin/crear", {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/crear`, {
             method: "POST",
             credentials: "include",
             headers: {

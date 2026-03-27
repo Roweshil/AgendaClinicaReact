@@ -38,7 +38,7 @@ export function ActualizarMedico() {
 
         if (medicoEditando) {
             // actualizar medico existente
-            const res = await fetch(`/api/medicos/${medicoEditando}`, {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/medicos/${medicoEditando}`, {
                 method: 'PUT',
                 credentials: 'include',
                 headers: { 'Content-Type': 'application/json' },
@@ -52,7 +52,7 @@ export function ActualizarMedico() {
             }
         } else {
             // Crear medico nuevo si no existe ID
-            const res = await fetch('/api/medicos', {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/medicos`, {
                 method: 'POST',
                 credentials: 'include',
                 headers: { 'Content-Type': 'application/json' },

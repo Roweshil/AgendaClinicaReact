@@ -13,7 +13,7 @@ export function Login() {
   const [password, setPassword] = useState("")
 
   const validate = async () => {
-      const res = await fetch("http://localhost:3050/api/auth/me", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/me`, {
         credentials: "include"
       })
 
@@ -27,7 +27,7 @@ export function Login() {
     e.preventDefault()
 
     try {
-      const res = await fetch("http://localhost:3050/api/auth/login", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/login`, {
         method: "POST",
         credentials: "include",
         headers: {

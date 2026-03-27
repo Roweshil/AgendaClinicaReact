@@ -16,7 +16,7 @@ export function MedicoProvider ({ children }) {
 
     useEffect(() => {
     const getCitas = async () => {
-        const res = await fetch("http://localhost:3050/api/medico/citas/mis-citas/", {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/medico/citas/mis-citas/`, {
             credentials: "include"
         })
 
