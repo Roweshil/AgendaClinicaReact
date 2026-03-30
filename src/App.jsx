@@ -4,21 +4,18 @@ import { Footer } from './components/Footer.jsx'
 import { Dashboard } from "./pages/Dashboard.jsx"
 
 
-
-
 function App() {
-
   return (
-      <div className='layout'>
+    <div className='layout'>
 
-        <Header />
-
-        <Dashboard />          
-
-        <Footer />
-
-      </div>
+      <Header />
       
+      <Dashboard />
+
+      
+      <Footer />
+
+    </div>
   )
 }
 

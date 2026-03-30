@@ -2,26 +2,13 @@ import { useState } from "react"
 import { useAuth } from "../hooks/useAuth.js"
 import { useNavigate } from 'react-router-dom'
 
-import { logError } from "../utils/logError.js"
-
 export function Login() {
 
-  const { setUser } = useAuth()
+  const { validate } = useAuth()
   const navigate = useNavigate()
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-
-  const validate = async () => {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/me`, {
-        credentials: "include"
-      })
-
-      const data = await res.json()
-      if (data.user) {
-        setUser(data.user)
-      }
-  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -46,7 +33,7 @@ export function Login() {
         navigate('/')
       }
     } catch (error) {
-      logError(error, 'login')
+      console.error(error, 'login')
       alert("Servidor no disponible intente mas tarde")
     }
     

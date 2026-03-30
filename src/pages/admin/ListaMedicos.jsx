@@ -8,7 +8,6 @@ export function ListaMedicos() {
     const { user } = useAuth()
     const { medicos } = useAdmin()
 
-
     return (
         <div>
             <h1>Lista de Médicos</h1>

@@ -1,5 +1,5 @@
 .layout {
-  background-color: rgb(166, 209, 207);
+  background-color: rgb(73, 114, 148);
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr;
@@ -29,6 +29,7 @@
 }
 
 .public-dashboard {
+  background-color: rgb(166, 209, 207);
   grid-area: viewport;
   display: flex;
   flex-direction: column;

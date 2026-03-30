@@ -39,6 +39,8 @@ export function CrearCita() {
             const nuevaCita = await res.json()
             agregarCita(nuevaCita)  // Agrega la nueva cita al contexto 
             console.log("Cita creada exitosamente")
+        } else {
+            console.log("error al crear la cita")
         }
         
     }

@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 export function CrearMedico() {
 
-    const { setMedicos } = useAdmin()
+    const { agregarMedico } = useAdmin()
 
     const [formData, setFormData] = useState({
         nombre: '', 
@@ -35,8 +35,8 @@ export function CrearMedico() {
 
             if(res.ok) {
                 const nuevoMedico = await res.json()
-                setMedicos(prev => [...prev, nuevoMedico])
-            console.log("Login exitoso")
+                agregarMedico(nuevoMedico) // Agrega el nuevo medico al contexto
+            console.log("Medico creado")
         }
         
     }

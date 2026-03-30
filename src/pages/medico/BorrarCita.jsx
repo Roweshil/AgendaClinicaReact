@@ -11,10 +11,10 @@ export function BorrarCita() {
         })
 
         if (res.ok) {
-         setCitas(prev => prev.filter(cita => cita.id !== id))
-         console.log("Cita eliminada")
+            setCitas(prev => prev.filter(cita => cita.uuid !== id))
+            console.log("Cita eliminada")
         } else {
-        console.log("data.error")
+            console.log("data.error")
         }
     }
 
