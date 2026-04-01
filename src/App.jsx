@@ -1,21 +1,21 @@
 import './App.css'
-import { Header } from './components/Header.jsx'
-import { Footer } from './components/Footer.jsx'
-import { Dashboard } from "./pages/Dashboard.jsx"
+
+import { Header } from './components/Header.jsx';
+import { Footer } from './components/Footer.jsx';
+import { Dashboard } from "./pages/Dashboard.jsx";
+
 
 
 function App() {
+
   return (
-    <div className='layout'>
+      <div className='layout'>
 
-      <Header />
+        <Header />
+        <Dashboard />
+        <Footer />
+      </div>
       
-      <Dashboard />
-
-      
-      <Footer />
-
-    </div>
   )
 }
 

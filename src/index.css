@@ -7,6 +7,7 @@
 body {
   margin: 0;
   font-family: system-ui, Arial, sans-serif;
+  background-color: #1e293b;
 }
 
 img {
@@ -16,4 +17,16 @@ img {
 
 button {
   font: inherit;
+}
+
+/* base — móvil */
+html {
+  font-size: 14px;
+}
+
+/* desktop */
+@media (min-width: 768px) {
+  html {
+    font-size: 16px; 
+  }
 }

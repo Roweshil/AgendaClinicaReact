@@ -1,14 +1,18 @@
 import { useMedico } from '../../hooks/useMedico.js'
+import { useAuth } from '../../hooks/useAuth.js'
 
     
 
 
 export function ListaCitas() {
     const { citas } = useMedico()
+    const { user } = useAuth()
 
 
     return (
         <section className="medico-lista">
+            <h2>Bienvenido, {user?.nombre?.toUpperCase()} {user?.apellido?.toUpperCase()}</h2>
+            <p>Aqui puedes gestionar tus citas.</p>
             <header >
 
                 <p>Citas registradas: {citas.length}</p>

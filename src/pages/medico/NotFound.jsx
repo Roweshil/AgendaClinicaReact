@@ -5,8 +5,7 @@ export const NotFound = () => (
     <h1>404</h1>
     
     <iframe 
-        width="560" 
-        height="315" 
+
         src="https://www.youtube.com/embed/_yqSbnbUsj4?si=8Eq6MEs7MAESAEtG" 
         title="YouTube video player" 
         frameborder="0" 

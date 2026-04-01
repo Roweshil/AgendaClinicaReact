@@ -47,31 +47,31 @@ export function CrearCita() {
 
     return (
         <section className="crear-cita">
-        <article  className="cita-card" >
-            <form onSubmit={crearCita}>
-                <header>
-                    <p className="cita-estado">Estado: Pendiente </p>
-                </header>
+            <article  className="cita-card" >
+                <form onSubmit={crearCita}>
+                    <header>
+                        <p className="cita-estado">Estado: Pendiente </p>
+                    </header>
 
-                <section className="cita-info">
-                    
-                    <p>Informacion de la cita:  </p>
-                    
-                    <p>Paciente: <input name="paciente" placeholder="Nombre del paciente" value={formData.paciente} onChange={handleChange} /></p>
-                    <p>Telefono: <input name="telefono" placeholder="Teléfono" value={formData.telefono} onChange={handleChange} /></p>
-                    <p>Fecha: <input name="fecha"    placeholder="Fecha"    value={formData.fecha}    onChange={handleChange} type="date" />  </p>
-                    <p>Hora:<input name="hora" placeholder="Hora" value={formData.hora}     onChange={handleChange} type="time" /></p>
-                    <p>Motivo: <input name="motivo" placeholder="Motivo" value={formData.motivo}     onChange={handleChange} /></p>
-                    
-                    
-                </section>
+                    <section className="cita-info">
+                        
+                        <p>Informacion de la cita:  </p>
+                        
+                        <p>Paciente: <input name="paciente" placeholder="Nombre del paciente" value={formData.paciente} onChange={handleChange} /></p>
+                        <p>Telefono: <input name="telefono" placeholder="Teléfono" value={formData.telefono} onChange={handleChange} /></p>
+                        <p>Fecha: <input name="fecha"    placeholder="Fecha"    value={formData.fecha}    onChange={handleChange} type="date" />  </p>
+                        <p>Hora:<input name="hora" placeholder="Hora" value={formData.hora}     onChange={handleChange} type="time" /></p>
+                        <p>Motivo: <input name="motivo" placeholder="Motivo" value={formData.motivo}     onChange={handleChange} /></p>
+                        
+                        
+                    </section>
 
-                <footer>
-                    <button type="submit">Crear cita</button>
-                    <button>Cancelar</button>
-                    
-                </footer>
-                </form>
+                    <footer>
+                        <button type="submit">Crear cita</button>
+                        <button>Cancelar</button>
+                        
+                    </footer>
+                    </form>
             </article>
         </section>
     )

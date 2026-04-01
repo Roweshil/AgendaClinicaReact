@@ -26,9 +26,7 @@ export function MedicoDashboard() {
                 <>
                     <main className="medico-dashboard">
                         <BarraLateralMedico />
-                        <section >
-                            <h1>Bienvenido, {user?.nombre?.toUpperCase()} {user?.apellido?.toUpperCase()}</h1>
-                            <p>Aqui puedes gestionar tus citas.</p>
+                        <section className="">
                             <AnimatePresence mode="wait">
                                 <Routes location={location} key={location.pathname}>
                                     <Route path="/" element={<Home />} />
