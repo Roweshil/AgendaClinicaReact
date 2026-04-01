@@ -70,7 +70,7 @@ export function ActualizarCita() {
 
     return (
         <div>
-            <h3>Actualizar Medico</h3>
+            <h3>Actualizar Citas</h3>
             <div>
                 <form onSubmit={handleSubmit}>
                     <input name="nombre" value={formData.paciente} onChange={handleChange} />

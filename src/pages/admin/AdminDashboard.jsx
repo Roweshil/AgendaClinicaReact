@@ -8,6 +8,7 @@ import { ListaMedicos } from './ListaMedicos.jsx'
 import { CrearMedico } from './CrearMedico.jsx'
 import { ActualizarMedico } from './ActualizarMedico.jsx'
 import { BorrarMedico } from './BorrarMedico.jsx'
+import { PageTransition } from '../../components/PageTransition.jsx'
 
 export function AdminDashboard() {
     const { user } = useAuth()
@@ -16,27 +17,27 @@ export function AdminDashboard() {
     return (
         <AdminProvider>
             { user ? (
-                <div className="admin-dashboard">
+                <main className="admin-dashboard">
                     <BarraLateralAdmin />
                     <section className="content">
                         <h1>Bienvenido, {user.nombre}!</h1>
                         <p>Aqui puedes gestionar medicos registrados.</p>
                         <AnimatePresence mode="wait">
                             <Routes location={location} key={location.pathname}>
-                                <Route path="/" element={<h1>Sobre nosotros</h1>} />
-                                <Route path="/lista" element={<ListaMedicos />} />
-                                <Route path="/crear" element={<CrearMedico />} />
-                                <Route path="/actualizar" element={<ActualizarMedico />} />
-                                <Route path="/borrar" element={<BorrarMedico />} />
+                                <Route path="/" element={<PageTransition><h1>Sobre nosotros</h1></PageTransition>} />
+                                <Route path="/lista" element={<PageTransition><ListaMedicos /></PageTransition>} />
+                                <Route path="/crear" element={<PageTransition><CrearMedico /></PageTransition>} />
+                                <Route path="/actualizar" element={<PageTransition><ActualizarMedico /></PageTransition>} />
+                                <Route path="/borrar" element={<PageTransition><BorrarMedico /></PageTransition>} />
                             </Routes>
                         </AnimatePresence>
                     </section> 
-                </div>   
+                </main>   
             ) : (
                     <>
                         <p>No has iniciado sesión mongolo</p>
                     </>
                 )}
-        </AdminProvider>                
+        </AdminProvider>
     )
 }

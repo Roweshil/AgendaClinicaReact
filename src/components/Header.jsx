@@ -18,15 +18,18 @@ export function Header() {
     return (
         <header className="header">
             <h1>RoweApps</h1>
+            
             {loading ? (
                 null  // no muestra nada mientras carga
             ) : user ? (
                 <nav>
+                    <button>TUTORIALES DE USO</button>
                     <span>Hola, {user.nombre}</span>
                     <button onClick={handleLogout}>Cerrar sesión</button>
                 </nav>
             ) : (
                 <nav>
+                    <button>TUTORIALES DE USO</button>
                     <span>No has iniciado sesión</span>
                     <Login />
                 </nav>

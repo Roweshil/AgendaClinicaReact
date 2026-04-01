@@ -1,11 +1,11 @@
 
 export function Home() {
     return (
-        <div className="home">
-            <h1>Bienvenido al Dashboard del Médico</h1>
-            
-            <p>Desde aquí puedes gestionar tus citas, crear nuevas, actualizar o eliminar las existentes.</p>
-            <h1>Sobre nosotros</h1>
+        <div className="medico-home">
+
+            <h1>PONDRE ALGO CUANDO SE ME OCURRA</h1>
+            <h1>=AREA EN CONSTRUCCION=</h1>
+
         </div>
     )
 }

@@ -1,5 +1,6 @@
+/*  Contenedor global de la app */
 .layout {
-  background-color: rgb(73, 114, 148);
+  background-color: #040508;
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr;
@@ -11,8 +12,21 @@
   font-family: sans-serif;
 }
 
+iframe {
+  box-shadow: 0 0 50px #000000;
+  border-radius: 12px;
+}
+
+iframe:hover {
+  box-shadow: 
+    0 0 10px rgba(91, 141, 239, 0.3),
+    0 0 25px rgba(91, 141, 239, 0.2);
+}
+
+/* Estilos del header, se comparte en todas las paginas */
+
 .header {
-  background-color: aliceblue;
+  background-color: #fff1e7;
   grid-area: header;
   display: flex;
   justify-content: space-between;
@@ -20,13 +34,61 @@
   padding-left: 3rem;
   padding-right: 3rem;
   border-bottom: 1px solid black;
+  color: #2A2F45;
+  /*Header hover: #1E293B*/
 }
 
 .header nav {
   display: flex;
   gap: 2rem;
   justify-content: center;
+  
 }
+
+/* Estilos del Sidebar general */
+
+.medico-sidebar {
+  background-color: #B5D2E6;
+  color: #000000;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid black;
+  text-align: center;
+}
+
+.medico-sidebar ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  gap: 5rem;
+}
+
+.sidebar-link {
+  display: block;
+  text-decoration: none;
+  box-shadow: 0 0 15px #000000;
+  color: black;
+  border: 1px solid rgb(47, 179, 212);
+  border-radius: 15px;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.sidebar-link:hover {
+box-shadow: 
+    0 0 10px rgba(91, 141, 239, 0.3),
+    0 0 25px rgba(91, 141, 239, 0.2);
+}
+
+.sidebar-link:visited {
+  color: rgb(7, 1, 1);
+}
+
+/* Estilos del Dashboard */
 
 .public-dashboard {
   background-color: rgb(166, 209, 207);
@@ -49,41 +111,97 @@
   grid-template-columns: 1fr 9fr;
 }
 
-.sidebar {
-  background-color: rgb(182, 194, 204);
+
+/* Estilos del DashBoard del Medico */
+
+.medico-dashboard > section  {
+  background-color: #366080;
   height: 100%;
   padding: 2rem;
+}
+.medico-dashboard button {
+  background-color: #b3a297;
+  color: rgb(0, 0, 0);
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.medico-dashboard button:hover {
+  background-color: #253129;
+}
+.medico-home {
+  background-color: #91b0d6;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-right: 1px solid black;
+  justify-content: center;
 }
 
-.sidebar ul {
+.medico-lista {
+  background-color: #91b0d6;
   display: flex;
   flex-direction: column;
-  list-style: none;
-  padding: 0;
-  gap: 5rem;
+  gap: 2rem;
 }
 
-.sidebar ul li {
-  color: black;
-  border: 1px solid rgb(47, 179, 212);
-  border-radius: 15px;
+.medico-lista header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.medico-lista-citas {
+  background-color: #B5D2E6;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1rem;
   padding: 1rem;
 }
 
-.content {
-  background-color: rgb(73, 114, 148);
-  height: 100%;
-  padding: 2rem;
+.crear-cita {
+  background-color: #91b0d6;
+  padding: 5rem 15rem;
 }
+
+.crear-cita article {
+  padding: 2rem 5rem;
+}
+
+/* Estilos de las citas */
+.cita-card {
+  background-color: #fff1e7;
+  box-shadow: 0 0 15px #000000;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.cita-card header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cita-card footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/* Estilos del Footer se comparte en todas las paginas */
 
 .footer {
   font-size: small;
   grid-area: footer;
-  background-color: rgb(200, 205, 209);
+  background-color: #2d2e2c;
+  color: white;
+  font-style: none;
 }
 
 .footer nav {
@@ -94,3 +212,27 @@
   gap: 8rem;
 }
 
+.footer a {
+  display: block;
+  text-decoration: none;
+  box-shadow: 0 0 15px #000000;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(47, 179, 212);
+  border-radius: 15px;
+  padding: 1rem;
+  cursor: pointer;
+} 
+
+.footer a:hover {
+  display: block;
+  text-decoration: none;
+  box-shadow: 0 0 15px #ffffff;
+} 
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}

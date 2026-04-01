@@ -1,32 +1,51 @@
-
-import { useAuth } from '../../hooks/useAuth.js'
 import { useMedico } from '../../hooks/useMedico.js'
 
     
 
 
 export function ListaCitas() {
-
-    const { user } = useAuth()
     const { citas } = useMedico()
 
 
     return (
-        <div>
-            <h1>Lista de Médicos</h1>
-            <article>
-                        <h2>Bienvenido a la Agenda Clinica RoweApps {user?.nombre?.toUpperCase()} {user?.apellido?.toUpperCase()}</h2>
-                        <h3>Citas registradas: {citas.length}</h3>
-                        <ul>
-                            {citas.map((cita) => (
-                            <li key={cita.uuid}> {cita.paciente} {cita.email} {cita.fecha} {cita.hora} {cita.motivo} {cita.estado}{cita.creacion}</li>
-                            ))}
-                        </ul>
-                        <button>
-                            Recargar citas DEPRECATED
-                        </button>
-                        
-            </article>
-        </div>
+        <section className="medico-lista">
+            <header >
+
+                <p>Citas registradas: {citas.length}</p>
+                <p>[ Filtros avanzados 🔎  ]</p> 
+                <p>[ Hoy ] [ Mañana ] [ Esta semana ] [ Pendientes ] [ Confirmadas ] [ Paciente ]</p>
+                
+                <form action="buscador">
+                    <input type="text" placeholder='Buscar cita...' />
+                    <button>Buscar</button>
+                </form>
+            </header>
+            <section className="medico-lista-citas">
+
+                    {citas.map((cita) => (
+                        <article key={cita.uuid} className="cita-card" >
+                            <header>
+                                <p className="cita-estado">Estado: {cita.estado}</p>
+                            </header>
+
+                            <section className="cita-info">
+                                <p>Fecha de creacion: {cita.creacion} </p>
+                                
+                                <p>{cita.paciente}</p>
+                                <p>Fecha: {cita.fecha} </p>
+                                <p>Hora: {cita.hora}hrs</p>
+                                <p>Motivo: {cita.motivo}</p>
+                            </section>
+
+                            <footer>
+                                <button>Detalles</button>
+                                <button>Editar</button>
+                                <button>Borrar</button>
+                            </footer>
+                        </article>
+                    ))}
+            </section>
+                
+        </section>
     )
 }
