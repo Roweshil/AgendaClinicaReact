@@ -1,431 +1,522 @@
+/* Contenedor global de la app */
+
 .layout {
   background-color: #B5D2E6;
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 12fr 1fr;
+  grid-template-rows: 1fr 12fr;
   grid-template-areas: 
     "header"
     "viewport";
   font-family: sans-serif;
- }
+}
 
- /* Pantalla de carga / Validacion de auth / Esperando respuesta de servidor */
-  .splash-screen {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+/* Pantalla de carga / Validacion de auth / Esperando respuesta de servidor */
+
+.splash-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Estilos del header, se comparte en todas las paginas */
+
+.btn-tutorial {
+  display: none;
+}
+
+.header {
+  grid-area: header;
+  background-color: #fff1e7;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid black;
+  color: #2A2F45;
+}
+
+.header button{
+  background-color: #b3a297;
+  color: rgb(0, 0, 0);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+/* Estilos del Bar general */
+
+.medico-bar {
+  grid-area: bottom-bar;
+  display: flex;
+  background-color: #B5D2E6;
+  color: #000000;
+  border-top: 1px solid black;
+  align-items: center;
+}
+
+.medico-bar h2 {
+  display: none;
+}
+
+.medico-bar ul {
+  display: flex;
+  list-style: none;
+  padding: 0rem 4rem;
+  gap: 3rem;
+  margin: 0;
   }
 
-  /* Estilos del header, se comparte en todas las paginas */
+.bar-link {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 0 15px #000000;
+  padding: 1.2rem 0.875rem;
+  border-radius: 15px;
+  color: #64748b;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 2px solid rgb(47, 179, 212);
+}
 
-  header {
-    background-color: #fff1e7;
-    grid-area: header;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid black;
-    color: #2A2F45;
-  }
+.bar-link:hover {
+box-shadow: 
+    0 0 10px rgba(91, 141, 239, 0.3),
+    0 0 25px rgba(91, 141, 239, 0.2);
+}
 
-  .tutorial {
-    display: none;
-  }
+.bar-link:visited {
+  color: rgb(7, 1, 1);
+}
 
-  header nav {
-    display: flex;
-    justify-content: center;
-    
-  }
+/* Estilos del Dashboard */
 
-  /* Estilos del Sidebar general */
+.public-dashboard {
+  background-color: rgb(166, 209, 207);
+  grid-area: viewport;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-  .medico-sidebar {
-    grid-area: bottom-bar;
-    background-color: #B5D2E6;
-    color: #000000;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    border-right: 1px solid black;
-    text-align: center;
-  }
 
-  .medico-sidebar h2 {
-    display: none;
-  }
+  /* Estilos del Dashboard del admin */
 
-  .medico-sidebar ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-  }
+.admin-dashboard {
+  grid-area: viewport;
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+}
 
-  .sidebar-link {
-    display: block;
-    text-decoration: none;
-    box-shadow: 0 0 15px #000000;
-    color: black;
-    border: 1px solid rgb(47, 179, 212);
-    border-radius: 15px;
-    cursor: pointer;
-  }
+/* Estilos del DashBoard del Medico */
+.medico-dashboard {
+  grid-area: viewport;
+  display: grid;
+  height:100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10fr 1fr;
+  grid-template-areas: 
+  "citas"
+  "bottom-bar";
+}
 
-  .sidebar-link:hover {
-  box-shadow: 
-      0 0 10px rgba(91, 141, 239, 0.3),
-      0 0 25px rgba(91, 141, 239, 0.2);
-  }
+.medico-content  {
+  grid-area: citas;
+  background-color: #91b0d6;
+  height: 100%;
+}
 
-  .sidebar-link:visited {
-    color: rgb(7, 1, 1);
-  }
-
-  /* Estilos del Dashboard */
-
-  .public-dashboard {
-    background-color: rgb(166, 209, 207);
-    grid-area: viewport;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .admin-dashboard {
-    grid-area: viewport;
-    display: grid;
-    grid-template-columns: 1fr 9fr;
-  }
-
-  /* Estilos del DashBoard del Medico */
-  .medico-dashboard {
-    grid-area: viewport;
-    display: grid;
-    height:100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 10fr 1fr;
-    grid-template-areas: 
-    "citas"
-    "bottom-bar";
-  }
-
-  .medico-dashboard > section  {
-    grid-area: "citas";
-    background-color: #366080;
-    height: 100%;
-  }
-
-  .medico-dashboard button {
+.medico-dashboard button {
     background-color: #b3a297;
     color: rgb(0, 0, 0);
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    transition: 0.2s ease-out;
+    transition: 0.3s ease-out;
+  }
+
+.medico-dashboard button:active {
+  background: #5a4e45;
+}
+
+/* Estilos del Home general */
+
+.medico-home {
+  background-color: #91b0d6;
+  min-width: 100%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 15px;
+}
+
+/* Estilos de detalle de cita */
+
+.detalle-cita {
+    background-color: #91b0d6;
+    min-width: 100%;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 15px;
+}
+
+/* Estilos de la lista de citas */
+
+.medico-lista {
+  background-color: #91b0d6;
+  display: flex;
+  flex-direction: column;
+}
+
+.medico-lista header {
+  background-color: #fff1e7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid black;
+  color: #2A2F45;
+}
+
+.medico-lista header article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.medico-lista header section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.medico-lista-citas {
+  background-color: #B5D2E6;
+  display: grid;
+  overflow-y: auto;
+  max-height: 65dvh;
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 1rem;
+  gap: 1rem;
+}
+
+
+/* Estilos de la creacion de citas */
+
+.crear-cita {
+  background-color: #91b0d6;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+
+/* Estilos de las citas */
+
+.cita-card {
+  background-color: #fff1e7;
+  box-shadow: 0 0 15px #000000;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.cita-card header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cita-card footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/* Estilos de la actualizacion de citas */
+
+.cita-card-actualizar {
+  background-color: #91b0d6;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+
+/* Estilos del Footer se comparte en todas las paginas */
+
+.footer {
+  display: none;
+}
+
+
+/* Estilos de los filtros */
+
+.filtro-select {
+  display: none;
+  padding: 0.4rem 0.875rem;
+  border-radius: 999px; /* pill */
+  border: 1.5px solid #cbd5e1;
+  background: transparent;
+  color: #64748b;
+  font-size: 0.813rem;
+  cursor: pointer;
+}
+
+.filtros-estado {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filtros-dia {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filtro-btn {
+  padding: 0.4rem 0.875rem;
+  border-radius: 999px; 
+  border: 1.5px solid #cbd5e1;
+  background: transparent;
+  color: #64748b;
+  font-size: 0.813rem;
+  cursor: pointer;
+}
+
+.filtro-btn.activo {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: #fff;
+}
+
+
+
+
+/* Estilos del Modal de confirmacion de borrado */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 280px;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.modal button{
+  background-color: #b3a297;
+  color: rgb(0, 0, 0);
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-confirmar:hover {
+  background-color: #b91c1c;
+}
+
+.btn-cancelar:hover {
+  background-color: #cfccca;
+}
+
+/* Estilos 404 */
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 10rem 0rem;
+}
+
+.not-found iframe {
+  width: 300px;
+  height: 170px;
+  box-shadow: 0 0 50px #000000;
+  border-radius: 12px;
+}
+
+.not-found iframe:hover {
+  box-shadow: 
+    0 0 10px rgba(91, 141, 239, 0.3),
+    0 0 25px rgba(91, 141, 239, 0.2);
+}
+
+
+
+
+/* Estilos para pantallas medianas y grandes */
+
+@media (min-width: 768px){
+
+  /*  Contenedor global de la app */
+
+  .layout {
+    grid-template-rows: 1fr 12fr 1fr;
+    grid-template-areas: 
+      "header"
+      "viewport"
+      "footer";
+  }
+
+  /* Estilos del boton para pagina de tutoriales */
+
+  .btn-tutorial {
+    display: block;
+  }
+  
+
+  /* Estilos del header, se comparte en todas las paginas */
+
+  .header {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .header nav {
+    gap: 2rem;
+  }
+
+  /* Estilos del Bar general */
+
+  .medico-bar {
+    gap: 7rem;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 2px solid black;
+  }
+
+  .medico-bar h2 {
+    display: block;
+  }
+
+  .medico-bar ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    gap: 9rem;
+  }
+
+  /* Estilos del Dashboard del admin */
+
+  /* Estilos del DashBoard del Medico */
+
+  .medico-dashboard {
+    grid-template-columns: 1fr 9fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:  
+      "bottom-bar citas";
+  }
+
+  .medico-content  {
+    background-color: #215883;
+    padding: 1rem;
+  }
+
+  .medico-dashboard button {
+    padding: 10px 16px;
   }
 
   .medico-dashboard button:active {
     background: #5a4e45;
   }
 
-  .medico-home {
-    background-color: #91b0d6;
-    min-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .medico-dashboard button:hover {
+    background-color: #074aa3;
   }
 
+   /* Estilos del Home general */
+
+  .medico-home {
+    padding: 2rem;
+  }
+
+ /* Estilos de detalle de cita */
+  
+   .detalle-cita {
+    padding: 9rem;
+  }
+
+  /* Estilos de la lista de citas */
+
   .medico-lista {
-    background-color: #91b0d6;
-    display: flex;
-    flex-direction: column;
+    border-radius: 15px;
   }
 
   .medico-lista header {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .medico-lista-citas {
-    background-color: #B5D2E6;
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    padding: 1rem;
-    gap: 1rem;
-  }
-
-  .crear-cita {
-    background-color: #91b0d6;
-    padding: 1rem;
-    gap: 1rem;
-  }
-
-  /* Estilos de las citas */
-  .cita-card {
-    background-color: #fff1e7;
-    box-shadow: 0 0 15px #000000;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 5rem;
-    border-radius: 15px;
-    width: 100%;
-  }
-
-  .cita-card header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .cita-card footer {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .not-found {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-  }
-
-  .not-found iframe {
-    width: 300px;
-    height: 170px;
-    box-shadow: 0 0 50px #000000;
-    border-radius: 12px;
-  }
-
-/* Estilos del Footer se comparte en todas las paginas */
-.footer {
-  display: none;
-}
-
-
-
-
-
-
-
-
-@media (min-width: 768px){
-
-/*  Contenedor global de la app */
-  .layout {
-    background-color: #B5D2E6;
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 12fr 1fr;
-    grid-template-areas: 
-      "header"
-      "viewport"
-      "footer";
-    font-family: sans-serif;
-  }
-
-  /* Pantalla de carga / Validacion de auth / Esperando respuesta de servidor */
-  .splash-screen {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* Video insertado de YouTube */
-  iframe {
-    box-shadow: 0 0 50px #000000;
-    border-radius: 12px;
-  }
-
-  iframe:hover {
-    box-shadow: 
-      0 0 10px rgba(91, 141, 239, 0.3),
-      0 0 25px rgba(91, 141, 239, 0.2);
-  }
-
-  /* Estilos del header, se comparte en todas las paginas */
-
-  .header {
-    background-color: #fff1e7;
-    grid-area: header;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 3rem;
-    padding-right: 3rem;
     border-bottom: 1px solid black;
-    color: #2A2F45;
-    /*Header hover: #1E293B*/
+    border-radius: 15px 15px 0 0;
   }
 
-  .header nav {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    
-  }
-
-  /* Estilos del Dashboard */
-
-  .public-dashboard {
-    background-color: rgb(166, 209, 207);
-    grid-area: viewport;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .admin-dashboard {
-    grid-area: viewport;
-    display: grid;
-    grid-template-columns: 1fr 9fr;
-  }
-
-  .medico-dashboard {
-    grid-area: viewport;
-    display: grid;
-    grid-template-columns: 1fr 9fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:  
-      "side-bar" "citas";
-  }
-
-
-  /* Estilos del DashBoard del Medico */
-
-  .medico-dashboard > section  {
-    grid-area: "citas";
-    background-color: #366080;
-    height: 100%;
-    padding: 2rem;
-  }
-
-  .medico-dashboard button {
-    background-color: #b3a297;
-    color: rgb(0, 0, 0);
-    padding: 10px 16px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    transition: 0.2s ease;
-  }
-
-  .medico-dashboard button:hover {
-    background-color: #253129;
-  }
-
-   /* Estilos del Sidebar general */
-
-  .medico-sidebar {
-    grid-area: side-bar;
-    background-color: #B5D2E6;
-    color: #000000;
-    height: 100%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-right: 1px solid black;
-    text-align: center;
-  }
-
-  .medico-sidebar ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
+  .medico-lista header section {
     gap: 5rem;
   }
 
-  .sidebar-link {
-    display: block;
-    text-decoration: none;
-    box-shadow: 0 0 15px #000000;
-    color: black;
-    border: 1px solid rgb(47, 179, 212);
-    border-radius: 15px;
-    padding: 1rem;
-    cursor: pointer;
-  }
-
-  .sidebar-link:hover {
-  box-shadow: 
-      0 0 10px rgba(91, 141, 239, 0.3),
-      0 0 25px rgba(91, 141, 239, 0.2);
-  }
-
-  .sidebar-link:visited {
-    color: rgb(7, 1, 1);
-  }
-
-  .medico-home {
-    background-color: #91b0d6;
-    min-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .medico-lista {
-    background-color: #91b0d6;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .medico-lista header {
-    display: flex;
-    justify-content: space-between;
-  }
-
   .medico-lista-citas {
-    background-color: #B5D2E6;
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
+    max-height: 64dvh;
   }
+
+  /* Estilos de la creacion de citas */
 
   .crear-cita {
-    background-color: #91b0d6;
-    padding: 5rem 15rem;
-  }
-
-  .crear-cita article {
-    padding: 2rem 5rem;
-  }
-
-  /* Estilos de las citas */
-  .cita-card {
-    background-color: #fff1e7;
-    box-shadow: 0 0 15px #000000;
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem;
+    padding: 12rem 15rem;
     border-radius: 15px;
-    width: 100%;
   }
 
-  .cita-card header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  /* Estilos del Modal de confirmacion de borrado */
+
+  .modal {
+    padding: 4rem;
+    min-width: 400px;
+    min-height: 300px;
   }
 
-  .cita-card footer {
-    display: flex;
-    justify-content: space-around;
+  .modal button{
+    padding: 0.5rem 1rem;
   }
-
 
   /* Estilos del Footer se comparte en todas las paginas */
 
@@ -463,12 +554,14 @@
     box-shadow: 0 0 15px #ffffff;
   } 
 
+  /* Estilos 404 */
+
   .not-found {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
+    padding: 0;
   }
 
+  .not-found iframe {
+    width: 900px;
+    height: 510px;
+  }
 }

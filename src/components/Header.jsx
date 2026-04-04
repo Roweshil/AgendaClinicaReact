@@ -23,7 +23,7 @@ export function Header() {
                 <span>Cargando</span>  // no muestra nada mientras carga
             ) : user ? (
                 <nav>
-                    <button className="tutorial">TUTORIALES DE USO</button>
+                    <button className="btn-tutorial">TUTORIALES DE USO</button>
                     <span>Hola, {user.nombre}</span>
                     <button onClick={handleLogout}>Cerrar sesión</button>
                 </nav>

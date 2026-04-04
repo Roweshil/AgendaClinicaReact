@@ -1,11 +1,15 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useNavigate } from "react-router-dom"
 import { useMedico } from '../../hooks/useMedico.js'
-
+import { useSearchParams } from "react-router-dom"
 
 export function ActualizarCita() {
 
+    const navigate = useNavigate()
+    const [searchParams] = useSearchParams()
+    const uuidParam = searchParams.get("uuid")
+
     const { citas, setCitas } = useMedico()
-    const [citaEditando, setCitaEditando] = useState(null)
 
     const [formData, setFormData] = useState({
         paciente: '',
@@ -13,98 +17,98 @@ export function ActualizarCita() {
         fecha: '',
         hora: '',
         motivo: '',
-        estado: 'confirmada'
+        estado: ''
     })
+
+    useEffect(() => {
+        if (uuidParam && citas.length > 0) {
+        const cita = citas.find(c => c.uuid === uuidParam)
+        if (cita) {
+            setFormData({
+            paciente: cita.paciente,
+            telefono: cita.telefono,
+            fecha: cita.fecha,
+            hora: cita.hora,
+            motivo: cita.motivo,
+            estado: cita.estado
+            })
+        }
+        }
+    }, [uuidParam, citas])
 
     const handleChange = (e) => {
         const { name, value } = e.target
         setFormData(prev => ({
             ...prev,
-            [name]: value
+            [name]: name === "telefono" ? String(value) : value
         }))
-    }
-
-    const handleEditar = (cita) => {
-        setCitaEditando(cita.id)
-        setFormData({ paciente: cita.paciente, telefono: cita.telefono, fecha: cita.fecha, hora: cita.hora, motivo: cita.motivo, estado: cita.estado })
-    }
-
-    const handleCancelar = () => {
-        setCitaEditando(null)
-        setFormData({ paciente: '', telefono: '', fecha: '', hora: '', motivo: '', estado: 'confirmada' })
     }
 
 
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        if (citaEditando) {
-            // actualizar cita existente
-            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/citas/${citaEditando}`, {
-                method: 'PUT',
+        const body = {
+            ...formData,
+            telefono: String(formData.telefono) 
+        }
+
+        // actualizar cita existente
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/medico/citas/actualizar/${uuidParam}`, 
+            {
+                method: 'PATCH',
                 credentials: 'include',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
-            })
-            if (res.ok) {
-                setCitas(prev => prev.map(m =>
-                    m.id === citaEditando ? { id: citaEditando, ...formData } : m
-                ))
-                handleCancelar()
+                body: JSON.stringify(body)
             }
-        } else {
-            // Crear medico nuevo si no existe ID
-            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/medicos`, {
-                method: 'POST',
-                credentials: 'include',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
-            })
-            if (res.ok) {
-                const nuevaCita = await res.json()
-                setCitas(prev => [...prev, nuevaCita])  // Agrega la nueva cita al contexto
-                handleCancelar()
-            }
+        )
+
+        if (res.ok) {
+            setCitas(prev => prev.map(c =>
+                c.uuid === uuidParam ? { ...c, ...body } : c
+            ))
+            alert("Cita actualizada exitosamente")
+            navigate('/lista')
+            } else {
+            const error = await res.json()
+            console.log("error backend:", error)
         }
     }
 
-    return (
-        <div>
-            <h3>Actualizar Citas</h3>
-            <div>
-                <form onSubmit={handleSubmit}>
-                    <input name="nombre" value={formData.paciente} onChange={handleChange} />
-                    <input name="telefono" value={formData.telefono} onChange={handleChange} />
-                    <input name="fecha" value={formData.fecha} onChange={handleChange} />
-                    <input name="hora" value={formData.hora} onChange={handleChange} />
-                    <textarea
-                        name="motivo"
-                        value={formData.motivo}
-                        onChange={handleChange}
-                        rows={4}        // altura en líneas
-                        cols={50}       // ancho en caracteres
-                        placeholder="Describe el motivo de la consulta..."
-                    />
-                    <input name="estado" value={formData.estado} onChange={handleChange} />
-                    
-                    
-                    
-                    <button type="submit">
-                        {citaEditando ? 'Actualizar' : 'Crear'}  {/* cambia el texto solo */}
-                    </button>
-                    
-                    {citaEditando && (
-                        <button type="button" onClick={handleCancelar}>Cancelar</button>
-                    )}
-                </form>
+    
 
-                {citas.map(cita => (
-                    <div key={cita.uuid}>
-                        <span>{cita.paciente} {cita.telefono} {cita.fecha} {cita.hora} {cita.motivo} {cita.estado}{cita.creacion}</span>
-                        <button onClick={() => handleEditar(cita)}>Editar</button>
-                    </div>
-                ))}
-                </div>
-        </div>
+    return (
+        <section className="cita-card-actualizar">
+            <article  className="cita-card" >
+                <form onSubmit={handleSubmit}>
+                    <header>
+                        
+                    </header>
+
+                    <section className="cita-info">
+                        <p>Informacion de la cita:  </p>
+                        
+                        <p>Paciente: <input name="paciente" placeholder="Nombre del paciente" value={formData.paciente} onChange={handleChange} /></p>
+                        <p>Telefono: <input name="telefono" placeholder="Teléfono" value={formData.telefono} onChange={handleChange} /></p>
+                        <p>Fecha: <input name="fecha"    placeholder="Fecha"    value={formData.fecha}    onChange={handleChange} type="date" />  </p>
+                        <p>Hora:<input name="hora" placeholder="Hora" value={formData.hora}     onChange={handleChange} type="time" /></p>
+                        <p>Motivo: <input name="motivo" placeholder="Motivo" value={formData.motivo}     onChange={handleChange} /></p>
+                        <p> Estado: <select name="estado" value={formData.estado} onChange={handleChange}>
+                                        <option value="confirmada"> Confirmada </option>
+                                        <option value="cancelada"> Cancelada </option>
+                                        <option value="vencida"> Vencida </option>
+                                    </select>
+                        </p>
+                    
+                    </section>
+
+                    <footer>
+                        <button type="submit">Guardar</button>
+                        
+                        <button type="button" onClick={() => navigate(`/lista`)} >Cancelar</button>
+                    </footer>
+                </form>
+            </article>
+        </section>
     )
 }
