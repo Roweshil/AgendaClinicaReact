@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import { useNavigate } from "react-router-dom"
 
 import { useMedico } from '../../hooks/useMedico.js'
 
 export function CrearCita() {
 
+    const navigate = useNavigate()
     const { agregarCita } = useMedico()
 
     const [formData, setFormData] = useState({
@@ -39,6 +41,7 @@ export function CrearCita() {
             const nuevaCita = await res.json()
             agregarCita(nuevaCita)  // Agrega la nueva cita al contexto 
             alert("Cita creada exitosamente")
+            navigate('/lista')
         } else {
             alert("Cita duplicada")
         }
@@ -68,7 +71,7 @@ export function CrearCita() {
 
                     <footer>
                         <button type="submit">Crear cita</button>
-                        <button>Cancelar</button>
+                        <button type="button" onClick={() => navigate(`/lista`)} >Cancelar</button>
                         
                     </footer>
                     </form>
