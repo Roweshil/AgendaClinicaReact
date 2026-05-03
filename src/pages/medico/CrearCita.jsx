@@ -49,32 +49,51 @@ export function CrearCita() {
     }
 
     return (
-        <section className="crear-cita">
-            <article  className="cita-card" >
+        <section className="section--crear-cita">
+            <section className="section--crear-cita-header">
+                <article>
+                    <h1>Registra una nueva cita</h1>
+                </article>
+                <article className="section--crear-cita-status">
+                    <p>Estado inicial</p>
+                    <h2>Pendiente</h2>
+                    <p>La cita aparecera en la agenda una vez guardada</p>
+                </article>
+            </section>
+            <article  className="section--crear-cita-card" >
                 <form onSubmit={crearCita}>
                     <header>
-                        <p className="cita-estado">Estado: Pendiente </p>
+                        <h2>Datos de la cita</h2>
                     </header>
 
-                    <section className="cita-info">
-                        
-                        <p>Informacion de la cita:  </p>
-                        
-                        <p>Paciente: <input name="paciente" placeholder="Nombre del paciente" value={formData.paciente} onChange={handleChange} /></p>
-                        <p>Telefono: <input name="telefono" placeholder="Teléfono" value={formData.telefono} onChange={handleChange} /></p>
-                        <p>Fecha: <input name="fecha"    placeholder="Fecha"    value={formData.fecha}    onChange={handleChange} type="date" />  </p>
-                        <p>Hora:<input name="hora" placeholder="Hora" value={formData.hora}     onChange={handleChange} type="time" /></p>
-                        <p>Motivo: <input name="motivo" placeholder="Motivo" value={formData.motivo}     onChange={handleChange} /></p>
-                        
-                        
+                    <section className="section--crear-cita-info">
+                        <div>
+                            <p>Paciente:</p> 
+                            <input name="paciente" placeholder="Nombre del paciente" value={formData.paciente} onChange={handleChange} />
+                        </div>
+                        <div>
+                            <p>Telefono: </p>
+                            <input name="telefono" placeholder="0000000000" value={formData.telefono} onChange={handleChange} />
+                        </div>
+                        <div>
+                            <p>Fecha: </p>
+                            <input name="fecha"    placeholder="Fecha"    value={formData.fecha}    onChange={handleChange} type="date" /> 
+                        </div>
+                        <div>
+                            <p>Hora:</p>
+                            <input name="hora" placeholder="Hora" value={formData.hora}     onChange={handleChange} type="time" />
+                        </div>
+                        <div>
+                            <p>Motivo:</p> 
+                            <input name="motivo" placeholder="Describe el motivo principal de consulta" value={formData.motivo}     onChange={handleChange} />
+                        </div> 
                     </section>
 
                     <footer>
-                        <button type="submit">Crear cita</button>
-                        <button type="button" onClick={() => navigate(`/lista`)} >Cancelar</button>
-                        
+                        <button type="submit" className="button-1">Crear cita</button>
+                        <button type="button" onClick={() => navigate(`/lista`)} className="button-2">Cancelar</button>
                     </footer>
-                    </form>
+                </form>
             </article>
         </section>
     )

@@ -25,7 +25,7 @@ export function MedicoDashboard() {
             { user ? (
                 <>
                     <main className="medico-dashboard">
-                        <BarraLateralMedico />
+                        
                         <section className="medico-content">
                             <AnimatePresence mode="wait">
                                 <Routes location={location} key={location.pathname}>
@@ -38,6 +38,7 @@ export function MedicoDashboard() {
                                 </Routes>
                             </AnimatePresence>
                         </section> 
+                        <BarraLateralMedico />
                     </main> 
                 </>  
             ) : (

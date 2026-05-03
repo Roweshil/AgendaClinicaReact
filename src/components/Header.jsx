@@ -17,16 +17,14 @@ export function Header() {
 
     return (
         <header className="header">
-            <h1>RoweApps</h1>
-            
             {loading ? (
                 <span>Cargando</span>  // no muestra nada mientras carga
             ) : user ? (
-                <nav>
+                <section className="section--header-logged">
+                    <p>{user?.nombre?.toUpperCase()} {user?.apellido?.toUpperCase()}</p>
                     <button className="btn-tutorial">TUTORIALES DE USO</button>
-                    <span>Hola, {user.nombre}</span>
                     <button onClick={handleLogout}>Cerrar sesión</button>
-                </nav>
+                </section>
             ) : (
                 <nav>
                     <span>No has iniciado sesión</span>

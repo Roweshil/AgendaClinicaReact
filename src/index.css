@@ -6,8 +6,12 @@
 
 body {
   margin: 0;
-  font-family: system-ui, Arial, sans-serif;
+  font-family: 'Manrope', 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
   background-color: #1e293b;
+}
+
+h1, h2, h3 {
+  font-family: 'Manrope', sans-serif;
 }
 
 img {
@@ -23,6 +27,7 @@ button {
 html {
   font-size: 14px;
 }
+
 
 /* desktop */
 @media (min-width: 768px) {

@@ -1,0 +1,2281 @@
+{
+  "version": "2.11",
+  "children": [
+    {
+      "type": "frame",
+      "id": "arReD",
+      "x": 120,
+      "y": 80,
+      "name": "Medico / Home",
+      "width": 1440,
+      "fill": "$bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "yEXg5",
+          "name": "header",
+          "width": "fill_container",
+          "fill": "$surface",
+          "padding": [
+            18,
+            28
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "W8oJk",
+              "name": "brand",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Ijzp0",
+                  "name": "brandA",
+                  "fill": "$ink",
+                  "content": "AgendaClinica",
+                  "fontFamily": "Anton",
+                  "fontSize": 34,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "IfIuf",
+                  "name": "brandB",
+                  "fill": "$muted",
+                  "content": "Panel medico",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "HegEH",
+              "name": "headerRight",
+              "gap": 14,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "glghV",
+                  "name": "helpBtn",
+                  "cornerRadius": 999,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$line"
+                  },
+                  "padding": [
+                    10,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "w2Rj0",
+                      "name": "helpText",
+                      "fill": "$ink",
+                      "content": "Tutoriales",
+                      "fontFamily": "Geist",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VgZng",
+                  "name": "userBox",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yrhhI",
+                      "name": "userName",
+                      "fill": "$ink",
+                      "content": "Dra. Andrea Soto",
+                      "fontFamily": "Geist",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "DVbaw",
+                      "name": "userRole",
+                      "fill": "$muted",
+                      "content": "Medicina general",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "NR1Cd",
+          "name": "body",
+          "width": "fill_container",
+          "height": 880,
+          "children": [
+            {
+              "type": "frame",
+              "id": "GisWf",
+              "name": "sidebar",
+              "width": 240,
+              "height": "fill_container",
+              "fill": "$surface",
+              "layout": "vertical",
+              "gap": 22,
+              "padding": [
+                28,
+                20
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "G01yI7",
+                  "name": "sideTitle",
+                  "fill": "$muted",
+                  "content": "Navegacion",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "Wi47w",
+                  "name": "nav1",
+                  "fill": "$accent-dark",
+                  "cornerRadius": 14,
+                  "padding": [
+                    14,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "qJ9fh",
+                      "name": "nav1t",
+                      "fill": "#FFFFFF",
+                      "content": "Home",
+                      "fontFamily": "Geist",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "G9TrTC",
+                  "name": "nav2",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$line"
+                  },
+                  "padding": [
+                    14,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "UneuO",
+                      "name": "nav2t",
+                      "fill": "$ink",
+                      "content": "Citas",
+                      "fontFamily": "Geist",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kopMl",
+                  "name": "nav3",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$line"
+                  },
+                  "padding": [
+                    14,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "S2CTuP",
+                      "name": "nav3t",
+                      "fill": "$ink",
+                      "content": "Crear cita",
+                      "fontFamily": "Geist",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "lehHV",
+                  "name": "sidebarNote",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Consulta rapida, agenda del dia y seguimiento de pacientes desde un mismo flujo.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Geist",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "AT22v",
+              "name": "content",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "$panel",
+              "layout": "vertical",
+              "gap": 22,
+              "padding": 28,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "vcaYd",
+                  "name": "hero",
+                  "width": "fill_container",
+                  "fill": "$surface",
+                  "cornerRadius": 20,
+                  "gap": 18,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "g5qJe",
+                      "name": "heroCopy",
+                      "width": 560,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "wBXhW",
+                          "name": "heroKicker",
+                          "fill": "$accent-dark",
+                          "content": "HOME",
+                          "fontFamily": "IBM Plex Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "LA3f0",
+                          "name": "heroTitle",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Tu jornada clinica, clara desde el primer vistazo.",
+                          "lineHeight": 0.94,
+                          "fontFamily": "Anton",
+                          "fontSize": 54,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Q7TFZ",
+                          "name": "heroBody",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Resumen del dia, acceso rapido a tus proximas consultas y estado general de la agenda en una sola superficie.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Geist",
+                          "fontSize": 18,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "t4mv7",
+                          "name": "heroActions",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "RXzSt",
+                              "name": "heroBtn1",
+                              "fill": "$accent-dark",
+                              "cornerRadius": 14,
+                              "padding": [
+                                12,
+                                16
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "ZcYdX",
+                                  "name": "heroBtn1t",
+                                  "fill": "#FFFFFF",
+                                  "content": "Ver citas",
+                                  "fontFamily": "Geist",
+                                  "fontSize": 15,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "ZtnEA",
+                              "name": "heroBtn2",
+                              "cornerRadius": 14,
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "$line"
+                              },
+                              "padding": [
+                                12,
+                                16
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "HR6ko",
+                                  "name": "heroBtn2t",
+                                  "fill": "$ink",
+                                  "content": "Nueva cita",
+                                  "fontFamily": "Geist",
+                                  "fontSize": 15,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "M7Vvr",
+                      "name": "heroAside",
+                      "width": "fill_container",
+                      "fill": "#F8FBFF",
+                      "cornerRadius": 16,
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Wlx4l",
+                          "name": "heroAsideA",
+                          "fill": "$muted",
+                          "content": "Hoy",
+                          "fontFamily": "IBM Plex Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "jsl2T",
+                          "name": "heroAsideB",
+                          "fill": "$ink",
+                          "content": "08 citas programadas",
+                          "fontFamily": "Anton",
+                          "fontSize": 40,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "tAhuW",
+                          "name": "heroAsideC",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "La siguiente consulta empieza a las 10:30 con Mariana Rojas.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Geist",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zOImf",
+                  "name": "stats",
+                  "width": "fill_container",
+                  "gap": 18,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "bzsuH",
+                      "name": "card1",
+                      "width": "fill_container",
+                      "fill": "$surface",
+                      "cornerRadius": 18,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "cDMM5",
+                          "name": "card1a",
+                          "fill": "$muted",
+                          "content": "Pendientes",
+                          "fontFamily": "IBM Plex Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "CR6ry",
+                          "name": "card1b",
+                          "fill": "$ink",
+                          "content": "03",
+                          "fontFamily": "Anton",
+                          "fontSize": 40,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "vw8vG",
+                      "name": "card2",
+                      "width": "fill_container",
+                      "fill": "$surface",
+                      "cornerRadius": 18,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Sj8sz",
+                          "name": "card2a",
+                          "fill": "$muted",
+                          "content": "Confirmadas",
+                          "fontFamily": "IBM Plex Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ikTKH",
+                          "name": "card2b",
+                          "fill": "$success",
+                          "content": "05",
+                          "fontFamily": "Anton",
+                          "fontSize": 40,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "eYl16",
+                      "name": "card3",
+                      "width": "fill_container",
+                      "fill": "$surface",
+                      "cornerRadius": 18,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "QxBZf",
+                          "name": "card3a",
+                          "fill": "$muted",
+                          "content": "Seguimiento",
+                          "fontFamily": "IBM Plex Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "wLgu9",
+                          "name": "card3b",
+                          "fill": "$warning",
+                          "content": "02",
+                          "fontFamily": "Anton",
+                          "fontSize": 40,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Z6fSA",
+                  "name": "agenda",
+                  "width": "fill_container",
+                  "gap": 18,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vPLrp",
+                      "name": "leftPanel",
+                      "width": "fill_container",
+                      "fill": "$surface",
+                      "cornerRadius": 20,
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 22,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "jIVAn",
+                          "name": "leftTitle",
+                          "fill": "$ink",
+                          "content": "Agenda de hoy",
+                          "fontFamily": "Anton",
+                          "fontSize": 34,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "M9oNtv",
+                          "name": "apt1",
+                          "width": "fill_container",
+                          "fill": "#F8FBFF",
+                          "cornerRadius": 14,
+                          "padding": [
+                            14,
+                            16
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "n8dXwp",
+                              "name": "apt1a",
+                              "fill": "$ink",
+                              "content": "10:30 / Mariana Rojas",
+                              "fontFamily": "Geist",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "oUe36",
+                              "name": "apt1b",
+                              "fill": "$success",
+                              "content": "Confirmada",
+                              "fontFamily": "IBM Plex Mono",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "g068ce",
+                          "name": "apt2",
+                          "width": "fill_container",
+                          "fill": "#F8FBFF",
+                          "cornerRadius": 14,
+                          "padding": [
+                            14,
+                            16
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "QYw4E",
+                              "name": "apt2a",
+                              "fill": "$ink",
+                              "content": "12:15 / Daniel Perez",
+                              "fontFamily": "Geist",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "h3F41T",
+                              "name": "apt2b",
+                              "fill": "$warning",
+                              "content": "Pendiente",
+                              "fontFamily": "IBM Plex Mono",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Z0vPr",
+                      "name": "rightPanel",
+                      "width": 360,
+                      "fill": "$surface",
+                      "cornerRadius": 20,
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 22,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "F53roO",
+                          "name": "rightTitle",
+                          "fill": "$ink",
+                          "content": "Accesos rapidos",
+                          "fontFamily": "Anton",
+                          "fontSize": 34,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "HkBHt",
+                          "name": "quick1",
+                          "fill": "#F8FBFF",
+                          "cornerRadius": 14,
+                          "layout": "vertical",
+                          "gap": 8,
+                          "padding": 16,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "d6opf",
+                              "name": "quick1a",
+                              "fill": "$ink",
+                              "content": "Crear nueva cita",
+                              "fontFamily": "Geist",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "SBs87",
+                              "name": "quick1b",
+                              "fill": "$muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Registra una consulta en menos de un minuto.",
+                              "lineHeight": 1.45,
+                              "fontFamily": "Geist",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ztPRp",
+                          "name": "quick2",
+                          "fill": "#F8FBFF",
+                          "cornerRadius": 14,
+                          "layout": "vertical",
+                          "gap": 8,
+                          "padding": 16,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "spuJr",
+                              "name": "quick2a",
+                              "fill": "$ink",
+                              "content": "Buscar historial",
+                              "fontFamily": "Geist",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "hAvnx",
+                              "name": "quick2b",
+                              "fill": "$muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Revisa informacion reciente antes de la consulta.",
+                              "lineHeight": 1.45,
+                              "fontFamily": "Geist",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Br7iL",
+          "name": "footer",
+          "width": "fill_container",
+          "fill": "$surface",
+          "padding": [
+            18,
+            28
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "R0j8OA",
+              "name": "footerA",
+              "fill": "$muted",
+              "content": "AgendaClinica / flujo medico",
+              "fontFamily": "IBM Plex Mono",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "aZOH8",
+              "name": "footerB",
+              "fill": "$ink",
+              "content": "Contacto | FAQ | Privacidad",
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "xaO04",
+      "x": 1680,
+      "y": 80,
+      "name": "Medico / Citas",
+      "width": 1440,
+      "fill": "$bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Sk6tO",
+          "name": "header",
+          "width": "fill_container",
+          "fill": "$surface",
+          "padding": [
+            18,
+            28
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "lWpPK",
+              "name": "brand",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "FQo8N",
+                  "name": "brandA",
+                  "fill": "$ink",
+                  "content": "AgendaClinica",
+                  "fontFamily": "Anton",
+                  "fontSize": 34,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "MrIUr",
+                  "name": "brandB",
+                  "fill": "$muted",
+                  "content": "Panel medico",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "gllDZ",
+              "name": "headerRight",
+              "gap": 14,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "dGU1m",
+                  "name": "helpBtn",
+                  "cornerRadius": 999,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$line"
+                  },
+                  "padding": [
+                    10,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "OLdJ0",
+                      "name": "helpText",
+                      "fill": "$ink",
+                      "content": "Tutoriales",
+                      "fontFamily": "Geist",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "fEnvu",
+                  "name": "userBox",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ZNKdn",
+                      "name": "userName",
+                      "fill": "$ink",
+                      "content": "Dra. Andrea Soto",
+                      "fontFamily": "Geist",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "S4zvhX",
+                      "name": "userRole",
+                      "fill": "$muted",
+                      "content": "Medicina general",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Dcy3i",
+          "name": "body",
+          "width": "fill_container",
+          "height": 880,
+          "children": [
+            {
+              "type": "frame",
+              "id": "leZGg",
+              "name": "sidebar",
+              "width": 240,
+              "height": "fill_container",
+              "fill": "$surface",
+              "layout": "vertical",
+              "gap": 22,
+              "padding": [
+                28,
+                20
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AvuJ5",
+                  "name": "sideTitle",
+                  "fill": "$muted",
+                  "content": "Navegacion",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "aFLzi",
+                  "name": "nav1",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$line"
+                  },
+                  "padding": [
+                    14,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "xBjQY",
+                      "name": "nav1t",
+                      "fill": "$ink",
+                      "content": "Home",
+                      "fontFamily": "Geist",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "fpeos",
+                  "name": "nav2",
+                  "fill": "$accent-dark",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$accent-dark"
+                  },
+                  "padding": [
+                    14,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jAzhy",
+                      "name": "nav2t",
+                      "fill": "#FFFFFF",
+                      "content": "Citas",
+                      "fontFamily": "Geist",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aVYKT",
+                  "name": "nav3",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$line"
+                  },
+                  "padding": [
+                    14,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "xduNu",
+                      "name": "nav3t",
+                      "fill": "$ink",
+                      "content": "Crear cita",
+                      "fontFamily": "Geist",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "bF56c",
+                  "name": "sidebarNote",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Consulta rapida, agenda del dia y seguimiento de pacientes desde un mismo flujo.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Geist",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ycztk",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "$panel",
+              "layout": "vertical",
+              "gap": 22,
+              "padding": 28,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Ol1Pb",
+                  "width": "fill_container",
+                  "fill": "$surface",
+                  "cornerRadius": 20,
+                  "gap": 18,
+                  "padding": 24,
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "khw2h",
+                      "width": 520,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "AA4PF",
+                          "fill": "$accent-dark",
+                          "content": "CITAS",
+                          "fontFamily": "IBM Plex Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "UCfrg",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Consulta, filtra y prioriza la agenda sin perder contexto.",
+                          "lineHeight": 0.94,
+                          "fontFamily": "Anton",
+                          "fontSize": 50,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "rd90C",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Vista pensada para escanear el estado de cada cita, reaccionar rapido y entrar a detalle solo cuando haga falta.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Geist",
+                          "fontSize": 18,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "y6WHdj",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "tXkCg",
+                          "fill": "$accent-dark",
+                          "cornerRadius": 999,
+                          "padding": [
+                            10,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "RqMwb",
+                              "fill": "#FFFFFF",
+                              "content": "Hoy",
+                              "fontFamily": "Geist",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "o4pSEA",
+                          "cornerRadius": 999,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$line"
+                          },
+                          "padding": [
+                            10,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "og1kO",
+                              "fill": "$ink",
+                              "content": "Confirmadas",
+                              "fontFamily": "Geist",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "CPCWH",
+                          "cornerRadius": 999,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$line"
+                          },
+                          "padding": [
+                            10,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Eps4m",
+                              "fill": "$ink",
+                              "content": "Pendientes",
+                              "fontFamily": "Geist",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "m615X",
+                  "width": "fill_container",
+                  "gap": 18,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "T3FYJ",
+                      "width": "fill_container",
+                      "fill": "$surface",
+                      "cornerRadius": 18,
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 22,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Xtf2k",
+                          "fill": "$muted",
+                          "content": "Citas registradas",
+                          "fontFamily": "IBM Plex Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "a0jhh",
+                          "fill": "$ink",
+                          "content": "18",
+                          "fontFamily": "Anton",
+                          "fontSize": 40,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "H93Rh",
+                      "width": "fill_container",
+                      "fill": "$surface",
+                      "cornerRadius": 18,
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 22,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "OJi75",
+                          "fill": "$muted",
+                          "content": "Atendidas hoy",
+                          "fontFamily": "IBM Plex Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "BfAyD",
+                          "fill": "$success",
+                          "content": "06",
+                          "fontFamily": "Anton",
+                          "fontSize": 40,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "egyi5",
+                      "width": "fill_container",
+                      "fill": "$surface",
+                      "cornerRadius": 18,
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 22,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "cpP4m",
+                          "fill": "$muted",
+                          "content": "Requieren revision",
+                          "fontFamily": "IBM Plex Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Dhmmk",
+                          "fill": "$warning",
+                          "content": "04",
+                          "fontFamily": "Anton",
+                          "fontSize": 40,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "sIq3c",
+                  "width": "fill_container",
+                  "gap": 18,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "JFceL",
+                      "width": "fill_container",
+                      "fill": "$surface",
+                      "cornerRadius": 18,
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 22,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "uBMVr",
+                          "fill": "$ink",
+                          "content": "10:30 / Mariana Rojas",
+                          "fontFamily": "Anton",
+                          "fontSize": 34,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "M6xas",
+                          "fill": "$muted",
+                          "content": "Consulta general / Confirmada / Creada hoy 08:10",
+                          "fontFamily": "IBM Plex Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "yfDGv",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Motivo: control de presion y ajuste de tratamiento.",
+                          "lineHeight": 1.45,
+                          "fontFamily": "Geist",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "LhGc0",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "pErM9",
+                              "fill": "$accent-dark",
+                              "cornerRadius": 14,
+                              "padding": [
+                                10,
+                                14
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "JnY6X",
+                                  "fill": "#FFFFFF",
+                                  "content": "Detalles",
+                                  "fontFamily": "Geist",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "mFLcU",
+                              "cornerRadius": 14,
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "$line"
+                              },
+                              "padding": [
+                                10,
+                                14
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "acpIf",
+                                  "fill": "$ink",
+                                  "content": "Editar",
+                                  "fontFamily": "Geist",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "cnzJC",
+                      "width": "fill_container",
+                      "fill": "$surface",
+                      "cornerRadius": 18,
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 22,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "DPrlI",
+                          "fill": "$ink",
+                          "content": "12:15 / Daniel Perez",
+                          "fontFamily": "Anton",
+                          "fontSize": 34,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "n0lUnd",
+                          "fill": "$muted",
+                          "content": "Seguimiento / Pendiente / Creada ayer 17:45",
+                          "fontFamily": "IBM Plex Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "twTe1",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Motivo: revision de estudios y cambio de medicacion.",
+                          "lineHeight": 1.45,
+                          "fontFamily": "Geist",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "p9Lyv0",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "IRW6f",
+                              "fill": "$accent-dark",
+                              "cornerRadius": 14,
+                              "padding": [
+                                10,
+                                14
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "YR06p",
+                                  "fill": "#FFFFFF",
+                                  "content": "Detalles",
+                                  "fontFamily": "Geist",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "k3PZNe",
+                              "cornerRadius": 14,
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "$line"
+                              },
+                              "padding": [
+                                10,
+                                14
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "ooH2L",
+                                  "fill": "$ink",
+                                  "content": "Editar",
+                                  "fontFamily": "Geist",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "db1Y0",
+          "name": "footer",
+          "width": "fill_container",
+          "fill": "$surface",
+          "padding": [
+            18,
+            28
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "lJm8X",
+              "name": "footerA",
+              "fill": "$muted",
+              "content": "AgendaClinica / flujo medico",
+              "fontFamily": "IBM Plex Mono",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "ymWoD",
+              "name": "footerB",
+              "fill": "$ink",
+              "content": "Contacto | FAQ | Privacidad",
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "pjbyL",
+      "x": 3240,
+      "y": 80,
+      "name": "Medico / Crear cita",
+      "width": 1440,
+      "fill": "$bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "iRqpl",
+          "name": "header",
+          "width": "fill_container",
+          "fill": "$surface",
+          "padding": [
+            18,
+            28
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "l4sZwH",
+              "name": "brand",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "OfTVI",
+                  "name": "brandA",
+                  "fill": "$ink",
+                  "content": "AgendaClinica",
+                  "fontFamily": "Anton",
+                  "fontSize": 34,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "O5mno5",
+                  "name": "brandB",
+                  "fill": "$muted",
+                  "content": "Panel medico",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "SjvGe",
+              "name": "headerRight",
+              "gap": 14,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "K8znK",
+                  "name": "helpBtn",
+                  "cornerRadius": 999,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$line"
+                  },
+                  "padding": [
+                    10,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dQEUq",
+                      "name": "helpText",
+                      "fill": "$ink",
+                      "content": "Tutoriales",
+                      "fontFamily": "Geist",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "gzXBZ",
+                  "name": "userBox",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "w1khMR",
+                      "name": "userName",
+                      "fill": "$ink",
+                      "content": "Dra. Andrea Soto",
+                      "fontFamily": "Geist",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hyMGB",
+                      "name": "userRole",
+                      "fill": "$muted",
+                      "content": "Medicina general",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "b6QUWE",
+          "name": "body",
+          "width": "fill_container",
+          "height": 880,
+          "children": [
+            {
+              "type": "frame",
+              "id": "rbkEf",
+              "name": "sidebar",
+              "width": 240,
+              "height": "fill_container",
+              "fill": "$surface",
+              "layout": "vertical",
+              "gap": 22,
+              "padding": [
+                28,
+                20
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "n4JQZ",
+                  "name": "sideTitle",
+                  "fill": "$muted",
+                  "content": "Navegacion",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "b6aYP",
+                  "name": "nav1",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$line"
+                  },
+                  "padding": [
+                    14,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pXfaX",
+                      "name": "nav1t",
+                      "fill": "$ink",
+                      "content": "Home",
+                      "fontFamily": "Geist",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "IrUH5",
+                  "name": "nav2",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$line"
+                  },
+                  "padding": [
+                    14,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "a8hpiS",
+                      "name": "nav2t",
+                      "fill": "$ink",
+                      "content": "Citas",
+                      "fontFamily": "Geist",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "wvcSu",
+                  "name": "nav3",
+                  "fill": "$accent-dark",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$accent-dark"
+                  },
+                  "padding": [
+                    14,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VAbUC",
+                      "name": "nav3t",
+                      "fill": "#FFFFFF",
+                      "content": "Crear cita",
+                      "fontFamily": "Geist",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "ZHrPb",
+                  "name": "sidebarNote",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Consulta rapida, agenda del dia y seguimiento de pacientes desde un mismo flujo.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Geist",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "O0zar",
+              "name": "content",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "$panel",
+              "layout": "vertical",
+              "gap": 22,
+              "padding": 28,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "VMZgG",
+                  "name": "hero",
+                  "width": "fill_container",
+                  "fill": "$surface",
+                  "cornerRadius": 20,
+                  "gap": 18,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "J0qPd",
+                      "name": "heroCopy",
+                      "width": 560,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "q2ZaTC",
+                          "name": "heroKicker",
+                          "fill": "$accent-dark",
+                          "content": "CREAR CITA",
+                          "fontFamily": "IBM Plex Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "a9h7fv",
+                          "name": "heroTitle",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Registra una nueva consulta con un flujo claro y sin pasos de sobra.",
+                          "lineHeight": 0.94,
+                          "fontFamily": "Anton",
+                          "fontSize": 50,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "RuEF6",
+                          "name": "heroBody",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "La propuesta pone el formulario al centro, deja el estado visible y reserva un panel auxiliar para revisar datos antes de guardar.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Geist",
+                          "fontSize": 18,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "U0LuBp",
+                      "name": "heroSide",
+                      "width": "fill_container",
+                      "fill": "#F8FBFF",
+                      "cornerRadius": 16,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Q6n4C",
+                          "name": "heroSideA",
+                          "fill": "$muted",
+                          "content": "Estado inicial",
+                          "fontFamily": "IBM Plex Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "xsK8G",
+                          "name": "heroSideB",
+                          "fill": "$warning",
+                          "content": "Pendiente",
+                          "fontFamily": "Anton",
+                          "fontSize": 34,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Lr0GD",
+                          "name": "heroSideC",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "La cita aparecera en la agenda una vez guardada.",
+                          "lineHeight": 1.45,
+                          "fontFamily": "Geist",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Ao1RY",
+                  "name": "formArea",
+                  "width": "fill_container",
+                  "gap": 18,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "rGQyz",
+                      "name": "formCard",
+                      "width": "fill_container",
+                      "fill": "$surface",
+                      "cornerRadius": 20,
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "wVXvV",
+                          "name": "formTitle",
+                          "fill": "$ink",
+                          "content": "Datos de la cita",
+                          "fontFamily": "Anton",
+                          "fontSize": 36,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "TeqFa",
+                          "name": "row1",
+                          "width": "fill_container",
+                          "gap": 14,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "xpYXr",
+                              "name": "field1",
+                              "width": "fill_container",
+                              "fill": "#F8FBFF",
+                              "cornerRadius": 14,
+                              "layout": "vertical",
+                              "gap": 8,
+                              "padding": 14,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "Rz31p",
+                                  "name": "field1a",
+                                  "fill": "$muted",
+                                  "content": "Paciente",
+                                  "fontFamily": "IBM Plex Mono",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "hKZHV",
+                                  "name": "field1b",
+                                  "fill": "$ink",
+                                  "content": "Nombre del paciente",
+                                  "fontFamily": "Geist",
+                                  "fontSize": 16,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "L5LnIJ",
+                              "name": "field2",
+                              "width": "fill_container",
+                              "fill": "#F8FBFF",
+                              "cornerRadius": 14,
+                              "layout": "vertical",
+                              "gap": 8,
+                              "padding": 14,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "p8Eat",
+                                  "name": "field2a",
+                                  "fill": "$muted",
+                                  "content": "Telefono",
+                                  "fontFamily": "IBM Plex Mono",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "GUjgP",
+                                  "name": "field2b",
+                                  "fill": "$ink",
+                                  "content": "55 0000 0000",
+                                  "fontFamily": "Geist",
+                                  "fontSize": 16,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "agc3I",
+                          "name": "row2",
+                          "width": "fill_container",
+                          "gap": 14,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "VUlFR",
+                              "name": "field3",
+                              "width": "fill_container",
+                              "fill": "#F8FBFF",
+                              "cornerRadius": 14,
+                              "layout": "vertical",
+                              "gap": 8,
+                              "padding": 14,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "V0jVsA",
+                                  "name": "field3a",
+                                  "fill": "$muted",
+                                  "content": "Fecha",
+                                  "fontFamily": "IBM Plex Mono",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "WcrzN",
+                                  "name": "field3b",
+                                  "fill": "$ink",
+                                  "content": "2026-04-27",
+                                  "fontFamily": "Geist",
+                                  "fontSize": 16,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "o26iPQ",
+                              "name": "field4",
+                              "width": "fill_container",
+                              "fill": "#F8FBFF",
+                              "cornerRadius": 14,
+                              "layout": "vertical",
+                              "gap": 8,
+                              "padding": 14,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "lpWhY",
+                                  "name": "field4a",
+                                  "fill": "$muted",
+                                  "content": "Hora",
+                                  "fontFamily": "IBM Plex Mono",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "J4Idk",
+                                  "name": "field4b",
+                                  "fill": "$ink",
+                                  "content": "10:30",
+                                  "fontFamily": "Geist",
+                                  "fontSize": 16,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "obf8Y",
+                          "name": "motivo",
+                          "width": "fill_container",
+                          "fill": "#F8FBFF",
+                          "cornerRadius": 14,
+                          "layout": "vertical",
+                          "gap": 8,
+                          "padding": 14,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "m942Ca",
+                              "name": "motivoA",
+                              "fill": "$muted",
+                              "content": "Motivo",
+                              "fontFamily": "IBM Plex Mono",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Lv6O1",
+                              "name": "motivoB",
+                              "fill": "$ink",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Describe el motivo principal de la consulta.",
+                              "lineHeight": 1.45,
+                              "fontFamily": "Geist",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "R8nP9Y",
+                          "name": "actions",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "S600x",
+                              "name": "save",
+                              "fill": "$accent-dark",
+                              "cornerRadius": 14,
+                              "padding": [
+                                12,
+                                16
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "x2Lon",
+                                  "name": "saveT",
+                                  "fill": "#FFFFFF",
+                                  "content": "Guardar cita",
+                                  "fontFamily": "Geist",
+                                  "fontSize": 15,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "dROYv",
+                              "name": "cancel",
+                              "cornerRadius": 14,
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "$line"
+                              },
+                              "padding": [
+                                12,
+                                16
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "lSa4c",
+                                  "name": "cancelT",
+                                  "fill": "$ink",
+                                  "content": "Cancelar",
+                                  "fontFamily": "Geist",
+                                  "fontSize": 15,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "AOnNm",
+                      "name": "review",
+                      "width": 340,
+                      "fill": "$surface",
+                      "cornerRadius": 20,
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "x1sfUr",
+                          "name": "reviewA",
+                          "fill": "$ink",
+                          "content": "Revision previa",
+                          "fontFamily": "Anton",
+                          "fontSize": 36,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "xXY80",
+                          "name": "reviewB",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Verifica estos puntos antes de confirmar.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Geist",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "S4j03f",
+                          "name": "reviewList",
+                          "fill": "#F8FBFF",
+                          "cornerRadius": 14,
+                          "layout": "vertical",
+                          "gap": 10,
+                          "padding": 16,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "uopr1",
+                              "name": "review1",
+                              "fill": "$ink",
+                              "content": "1. Fecha y hora disponibles",
+                              "fontFamily": "Geist",
+                              "fontSize": 15,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "UQjjJ",
+                              "name": "review2",
+                              "fill": "$ink",
+                              "content": "2. Telefono correcto",
+                              "fontFamily": "Geist",
+                              "fontSize": 15,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "PpVNZ",
+                              "name": "review3",
+                              "fill": "$ink",
+                              "content": "3. Motivo suficientemente claro",
+                              "fontFamily": "Geist",
+                              "fontSize": 15,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Tc1dc",
+          "name": "footer",
+          "width": "fill_container",
+          "fill": "$surface",
+          "padding": [
+            18,
+            28
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "gI7r4",
+              "name": "footerA",
+              "fill": "$muted",
+              "content": "AgendaClinica / flujo medico",
+              "fontFamily": "IBM Plex Mono",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "UAQfG",
+              "name": "footerB",
+              "fill": "$ink",
+              "content": "Contacto | FAQ | Privacidad",
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "accent": {
+      "type": "color",
+      "value": "#2FB3D4"
+    },
+    "accent-dark": {
+      "type": "color",
+      "value": "#215883"
+    },
+    "bg": {
+      "type": "color",
+      "value": "#B5D2E6"
+    },
+    "danger": {
+      "type": "color",
+      "value": "#D15B5B"
+    },
+    "ink": {
+      "type": "color",
+      "value": "#2A2F45"
+    },
+    "line": {
+      "type": "color",
+      "value": "#D5DDEA"
+    },
+    "muted": {
+      "type": "color",
+      "value": "#5F6E86"
+    },
+    "panel": {
+      "type": "color",
+      "value": "#91B0D6"
+    },
+    "success": {
+      "type": "color",
+      "value": "#4C9A6A"
+    },
+    "surface": {
+      "type": "color",
+      "value": "#FFF1E7"
+    },
+    "warning": {
+      "type": "color",
+      "value": "#E3A84C"
+    }
+  }
+}

@@ -95,10 +95,10 @@ export function ListaCitas() {
     })
 
     return (
-        <section className="medico-lista">
-            <header>
+        <section className="section--medico-lista">
+            <header className="section--medico-lista-header">
                 <article>
-                    <p>Aqui puedes gestionar tus citas.</p>
+                    <h2>Aqui puedes gestionar tus citas.</h2>
                     <p>Citas registradas: {citas.length}</p>
                 </article>
                 
@@ -138,11 +138,7 @@ export function ListaCitas() {
                         <option value="confirmada">Confirmadas</option>
                         <option value="cancelada">Canceladas</option>
                         <option value="vencida">Vencidas</option>
-                    </select>
-                
-                    <button onClick={() => dispatch({ type: "RESET" })}>
-                    Todas
-                    </button>
+                    </select>      
                 </section>
             </header>
             <motion.div

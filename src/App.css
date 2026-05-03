@@ -1,15 +1,42 @@
 /* Contenedor global de la app */
 
 .layout {
-  background-color: #B5D2E6;
-  display: grid;
-  height: 100vh;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 12fr;
-  grid-template-areas: 
-    "header"
-    "viewport";
-  font-family: sans-serif;
+  background: #EDF1F5;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}
+
+.button-1 {
+  background-color: #1A2B4C;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button-1:hover {
+  background-color: #0073ff;
+}
+
+.button-2 {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: 1px solid grey;
+  padding: 12px 20px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button-2:hover{
+  background-color: #adc8e5;
 }
 
 
@@ -29,13 +56,21 @@
 }
 
 .header {
-  grid-area: header;
-  background-color: #fff1e7;
+  background-color: #f7f5f2;
+  box-shadow: 0 0 3px 0.1px #00000054;
+  color: #2A2F45;
+  height: 50px;
+}
+
+.section--header-logged {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-bottom: 1px solid black;
-  color: #2A2F45;
+  height: 100%;
+}
+
+.section--header-logged p {
+  font-weight: bold;
 }
 
 .header button{
@@ -58,12 +93,11 @@
 /* Estilos del Bar general */
 
 .medico-bar {
-  grid-area: bottom-bar;
-  display: flex;
-  background-color: #B5D2E6;
+  background-color: #f7f5f2;
   color: #000000;
-  border-top: 1px solid black;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.219);
   align-items: center;
+  border-radius: 10px;
 }
 
 .medico-bar h2 {
@@ -72,6 +106,7 @@
 
 .medico-bar ul {
   display: flex;
+  justify-content: space-evenly;
   list-style: none;
   padding: 0rem 4rem;
   gap: 3rem;
@@ -82,19 +117,13 @@
   display: block;
   text-decoration: none;
   text-align: center;
-  box-shadow: 0 0 15px #000000;
-  padding: 1.2rem 0.875rem;
-  border-radius: 15px;
+  padding: 1.2rem 0;
   color: #64748b;
   font-size: 1rem;
-  cursor: pointer;
-  border: 2px solid rgb(47, 179, 212);
 }
 
 .bar-link:hover {
-box-shadow: 
-    0 0 10px rgba(91, 141, 239, 0.3),
-    0 0 25px rgba(91, 141, 239, 0.2);
+  border-top: 3px solid #21A293;
 }
 
 .bar-link:visited {
@@ -105,7 +134,6 @@ box-shadow:
 
 .public-dashboard {
   background-color: rgb(166, 209, 207);
-  grid-area: viewport;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,61 +145,177 @@ box-shadow:
   /* Estilos del Dashboard del admin */
 
 .admin-dashboard {
-  grid-area: viewport;
   display: grid;
   grid-template-columns: 1fr 9fr;
 }
 
 /* Estilos del DashBoard del Medico */
 .medico-dashboard {
-  grid-area: viewport;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   height:100%;
-  grid-template-columns: 1fr;
-  grid-template-rows: 10fr 1fr;
-  grid-template-areas: 
-  "citas"
-  "bottom-bar";
+  justify-content: space-between;
 }
 
 .medico-content  {
-  grid-area: citas;
-  background-color: #91b0d6;
-  height: 100%;
-}
 
-.medico-dashboard button {
-    background-color: #b3a297;
-    color: rgb(0, 0, 0);
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s ease-out;
-  }
-
-.medico-dashboard button:active {
-  background: #5a4e45;
 }
 
 /* Estilos del Home general */
 
-.medico-home {
-  background-color: #91b0d6;
-  min-width: 100%;
+.section--medico-home {
   display: flex;
-  height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
-  text-align: center;
+  height: 100%;
+  padding: 1rem 1.5rem;
+  text-align: left;
   border-radius: 15px;
+  gap: 1rem;
 }
 
+
+
+.section--medico-home-header {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 0 1px 1px rgba(153, 152, 152, 0.06);
+  width: 100%;
+  border-left: 4px solid #008679;
+}
+
+
+
+.section--medico-home-alert {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.section--medico-home-alert h2 {
+  font-size: 25px;
+}
+
+.section--medico-home-alert p, h2 {
+  margin: 0;
+}
+
+.section--medico-home-next {
+  display: flex;
+  justify-content: space-between;
+  align-items:end;
+  background-color: #EDF1F5;
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+  font-size: medium;
+}
+
+.section--medico-home-next-title {
+  color: #48BDAE;
+}
+
+.section--medico-home-next-hour {
+  font-weight: bold;
+  font-size: large;
+}
+
+.section--medico-home-next p {
+  margin: 0;
+}
+
+.section--medico-home-notifications {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.section--medico-home-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F8FAFC;
+  border-radius: 10px;
+  width: 30%;
+  padding: 1rem;
+  gap: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  font-size: 15px;
+  color: #5A5F62;
+}
+
+.section--medico-home-cards p, h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.section--medico-home-cards-count {
+  font-weight: 1000;
+  font-size: 20px;
+  color: #008679;
+}
+
+.section--medico-schedule {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.section--medico-schedule h2 {
+  margin: 0;
+}
+
+.section--medico-schedule ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 1rem;
+}
+
+.section--medico-schedule-card {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(248, 248, 248);
+  list-style: none;
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 4px solid #4A90E2;
+  border-left: 4px solid #008679;
+}
+
+.section--medico-schedule-card-data {
+  display: flex;
+  font-size: medium;
+}
+
+.section--medico-schedule-card-data p {
+  padding: 0 1rem;
+}
+
+.section--medico-schedule-card-data p:first-child {
+  border-right: 1px solid #8d9195c2;
+  font-weight: bold;
+}
+
+.section--medico-home-news {
+  display: flex;
+  justify-content: center;
+  background-color: #008679;
+  padding: 2rem 1rem;
+  width: 100%;
+  height: 100%;
+}
 /* Estilos de detalle de cita */
 
 .detalle-cita {
-    background-color: #91b0d6;
+    background-color: #ffffff;
     min-width: 100%;
     display: flex;
     height: 100%;
@@ -185,13 +329,12 @@ box-shadow:
 
 /* Estilos de la lista de citas */
 
-.medico-lista {
-  background-color: #91b0d6;
+.section--medico-lista {
   display: flex;
   flex-direction: column;
 }
 
-.medico-lista header {
+.section--medico-lista-header {
   background-color: #fff1e7;
   display: flex;
   flex-direction: column;
@@ -199,13 +342,17 @@ box-shadow:
   align-items: center;
   border-bottom: 1px solid black;
   color: #2A2F45;
+  border-radius: 10px;
+  margin: 0.5rem;
+  padding: 1.5rem 0;
+
 }
 
 .medico-lista header article {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  
   text-align: center;
 }
 
@@ -215,25 +362,88 @@ box-shadow:
 }
 
 .medico-lista-citas {
-  background-color: #B5D2E6;
   display: grid;
   overflow-y: auto;
   max-height: 65dvh;
   place-items: center;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   padding: 1rem;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 
 /* Estilos de la creacion de citas */
 
-.crear-cita {
-  background-color: #91b0d6;
-  padding: 1rem;
+.section--crear-cita {
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
+.section--crear-cita-header {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF1E7;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.section--crear-cita-status {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.section--crear-cita-header p {
+  margin: 0.5rem 0;
+}
+
+.section--crear-cita-header h2 {
+  margin: 0.1rem 0;
+  color: #d3a016;
+}
+
+.section--crear-cita-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 15px;
+  background-color: #fff1e7;
+}
+
+.section--crear-cita-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.section--crear-cita-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section--crear-cita-info div {
+  display: flex;
+  flex-direction: column;
+  align-items:stretch  ;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  gap: 0.2rem;
+}
+
+.section--crear-cita-info p {
+  margin: 0;
+}
+
+.section--crear-cita-info input {
+  border: none;
+}
+
+.section--crear-cita footer {
+  margin-top: 2rem;
+}
 
 /* Estilos de las citas */
 
@@ -396,6 +606,17 @@ box-shadow:
   /*  Contenedor global de la app */
 
   .layout {
+    display: grid;
+    max-height: 100dvh;
+    width: 100dvw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 12fr;
+    grid-template-areas: 
+      "header"
+      "viewport";
+  }
+
+  .layout {
     grid-template-rows: 1fr 12fr 1fr;
     grid-template-areas: 
       "header"
@@ -413,6 +634,7 @@ box-shadow:
   /* Estilos del header, se comparte en todas las paginas */
 
   .header {
+    grid-area: header;
     padding-left: 3rem;
     padding-right: 3rem;
   }
@@ -442,20 +664,27 @@ box-shadow:
     gap: 9rem;
   }
 
+  .public-dashboard {
+    grid-area: viewport;
+  }
   /* Estilos del Dashboard del admin */
 
   /* Estilos del DashBoard del Medico */
 
-  .medico-dashboard {
-    grid-template-columns: 1fr 9fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:  
-      "bottom-bar citas";
-  }
+.medico-dashboard {
+  grid-area: viewport;
+  display: grid;
+  height:100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10fr 1fr;
+  grid-template-areas: 
+  "citas"
+  "bottom-bar";
+}
+
 
   .medico-content  {
-    background-color: #215883;
-    padding: 1rem;
+    grid-area: citas;
   }
 
   .medico-dashboard button {
@@ -466,14 +695,10 @@ box-shadow:
     background: #5a4e45;
   }
 
-  .medico-dashboard button:hover {
-    background-color: #074aa3;
-  }
-
    /* Estilos del Home general */
 
   .medico-home {
-    padding: 2rem;
+
   }
 
  /* Estilos de detalle de cita */
