@@ -7,7 +7,6 @@
 body {
   margin: 0;
   font-family: 'Manrope', 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
-  background-color: #1e293b;
 }
 
 h1, h2, h3 {
@@ -28,6 +27,14 @@ html {
   font-size: 14px;
 }
 
+/*Iphone SE */
+@media (max-width: 375px) {
+  h1, h2, h3, p {
+  font-size: 0.8rem; 
+  }
+  .layout { padding: 12px; }
+  .cita-card { padding: 12px; }
+}
 
 /* desktop */
 @media (min-width: 768px) {

@@ -1,0 +1,195 @@
+@media (max-width: 767.98px) {
+  html,
+  body,
+  #root,
+  .layout,
+  .medico-dashboard,
+  .medico-content {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .header {
+    height: auto;
+    min-height: 50px;
+    padding: 0.75rem 1rem;
+  }
+
+  .section--header-logged {
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .section--header-logged p {
+    width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .section--header-logged button {
+    flex: 1 1 auto;
+  }
+
+  .header nav {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .medico-bar {
+    width: 100%;
+    min-width: 0;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .medico-bar nav,
+  .medico-bar ul {
+    width: 100%;
+  }
+
+  .medico-bar ul {
+    padding: 0 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .medico-bar li {
+    width: auto;
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .bar-link {
+    padding: 1rem 0.25rem;
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+  }
+
+  .section--medico-home,
+  .section--medico-lista,
+  .section--crear-cita,
+  .detalle-cita,
+  .cita-card-actualizar {
+    min-width: 0;
+  }
+
+  .section--medico-home {
+    padding: 1rem;
+  }
+
+  .section--medico-home-alert,
+  .section--medico-home-next,
+  .section--medico-schedule-card,
+  .section--crear-cita-status div,
+  .cita-card-header {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .section--medico-home-next,
+  .section--medico-schedule-card {
+    align-items: flex-start;
+  }
+
+  .section--medico-home-notifications {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .section--medico-home-cards {
+    width: calc(50% - 0.375rem);
+    min-width: 0;
+  }
+
+  .section--medico-schedule-card-data {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .section--medico-schedule-card-data p {
+    padding: 0;
+  }
+
+  .section--medico-schedule-card-data p:first-child {
+    border-right: 0;
+  }
+
+  .detalle-cita {
+    padding: 1.25rem 1rem;
+  }
+
+  .detalle-cita img {
+    width: min(100%, 22rem);
+  }
+
+  .section--medico-lista {
+    padding: 0 1rem 1rem;
+  }
+
+  .section--medico-lista-header {
+    padding: 1.25rem 0;
+  }
+
+  .medico-lista-citas {
+    grid-template-columns: minmax(0, 1fr);
+    max-height: none;
+  }
+
+  .section--medico-lista-filtros,
+  .filtros-dia,
+  .filtros-estado,
+  .section--medico-lista-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .filtros-dia,
+  .filtros-estado,
+  .section--medico-lista-buttons {
+    justify-content: flex-start;
+  }
+
+  .filtro-btn-dia,
+  .filtro-btn-estado,
+  .section--medico-lista-buttons button {
+    flex: 1 1 10rem;
+    min-width: 0;
+    padding-inline: 1rem;
+  }
+
+  .section--crear-cita {
+    gap: 1.25rem;
+    padding: 0 1rem 1rem;
+  }
+
+  .section--crear-cita-info span {
+    flex-direction: column;
+  }
+
+  .section--crear-cita-info input {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .section--crear-cita-footer button {
+    width: 100%;
+  }
+
+  .cita-card {
+    min-width: 0;
+  }
+
+  .not-found {
+    padding: 4rem 1rem;
+  }
+
+  .not-found iframe {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section--medico-home-cards {
+    width: 100%;
+  }
+}

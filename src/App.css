@@ -4,7 +4,7 @@
   background: #EDF1F5;
   display: flex;
   flex-direction: column;
-  height: 100dvh;
+  max-height: 100dvh;
 }
 
 .button-1 {
@@ -59,7 +59,7 @@
   background-color: #DFE3E7;
   box-shadow: 0 0 3px 0.1px #00000054;
   color: #2A2F45;
-  height: 50px;
+  height: 6dvh;
 }
 
 .section--header-logged {
@@ -96,8 +96,8 @@
   background-color: #FFFF;
   color: #000000;
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.219);
-  align-items: center;
   border-radius: 10px;
+  height: 6dvh;
 }
 
 .medico-bar h2 {
@@ -163,7 +163,9 @@
 }
 
 .medico-content  {
-
+  max-width: 100%;
+  height: 87.5dvh;
+  overflow-y: auto; 
 }
 
 /* Estilos del Home general */
@@ -386,12 +388,12 @@
 }
 
 .filtro-btn-dia {
-  padding: 0.7rem 2rem;
+  padding: 1rem;
   border-radius: 999px; 
   border: 1.5px solid #cbd5e1;
   background: transparent;
   color: #64748b;
-  font-size: 14px;
+  font-size: 11px;
   cursor: pointer;
   font-weight: 500;
 }
@@ -403,12 +405,12 @@
 }
 
 .filtro-btn-estado {
-  padding: 0.7rem 2rem;
+  padding: 1rem;
   border-radius: 999px; 
   border: 1.5px solid #cbd5e1;
   background: transparent;
   color: #64748b;
-  font-size: 14px;
+  font-size: 11px;
   cursor: pointer;
   font-weight: 500;
 }
@@ -562,10 +564,84 @@
 
 /* Estilos de la actualizacion de citas */
 
-.cita-card-actualizar {
-  background-color: #91b0d6;
-  padding: 1rem;
+.section--actualizar-cita {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 1.5rem;
+}
+
+.section--actualizar-cita-header {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  font-size: medium;
+  margin-top: 2rem;
   gap: 1rem;
+}
+
+.section--actualizar-cita header h1, h2, p {
+  margin: 0;
+}
+
+.section--actualizar-cita-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.section--actualizar-cita-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.section--actualizar-cita-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.section--actualizar-cita-info div {
+  display: flex;
+  flex-direction: column;
+  align-items:stretch  ;
+  justify-content: center;
+  border-radius: 10px;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.section--actualizar-cita-info span {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section--actualizar-cita-info p {
+  margin: 0;
+}
+
+.section--actualizar-cita-info input {
+  border: none;
+  background-color: #DFE3E7;
+  padding:1.5rem 1rem;
+  border-radius: 5px;
+}
+
+.section--actualizar-cita-info select {
+  border: none;
+  background-color: #DFE3E7;
+  padding:1.5rem 1rem;
+  border-radius: 5px;
+}
+
+.section--actualizar-cita-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.section--actualizar-cita-footer button {
+    border-radius: 5px;
 }
 
 

@@ -78,34 +78,58 @@ export function ActualizarCita() {
     
 
     return (
-        <section className="cita-card-actualizar">
-            <article  className="cita-card" >
-                <form onSubmit={handleSubmit}>
-                    <header>
-                        
-                    </header>
+        <section className="section--actualizar-cita">
+            <header  className="section--actualizar-cita-header ">
+                <h1>Actualización de cita</h1>
 
-                    <section className="cita-info">
-                        <p>Informacion de la cita:  </p>
-                        
-                        <p>Paciente: <input name="paciente" placeholder="Nombre del paciente" value={formData.paciente} onChange={handleChange} /></p>
-                        <p>Telefono: <input name="telefono" placeholder="Teléfono" value={formData.telefono} onChange={handleChange} /></p>
-                        <p>Fecha: <input name="fecha"    placeholder="Fecha"    value={formData.fecha}    onChange={handleChange} type="date" />  </p>
-                        <p>Hora:<input name="hora" placeholder="Hora" value={formData.hora}     onChange={handleChange} type="time" /></p>
-                        <p>Motivo: <input name="motivo" placeholder="Motivo" value={formData.motivo}     onChange={handleChange} /></p>
-                        <p> Estado: <select name="estado" value={formData.estado} onChange={handleChange}>
-                                        <option value="confirmada"> Confirmada </option>
-                                        <option value="cancelada"> Cancelada </option>
-                                        <option value="vencida"> Vencida </option>
-                                    </select>
-                        </p>
+            </header>
+
+
+            <article  className="section--actualizar-cita-card" >
+                <form onSubmit={handleSubmit}>
+
+                    <section className="section-actualizar-cita-card">
+                        <header>Informacion de la cita:  </header>
+                        <section className="section--actualizar-cita-info">
+                            <div>
+                                <p>Paciente:</p> 
+                                <input name="paciente" placeholder="Nombre del paciente" value={formData.paciente} onChange={handleChange} />
+                            </div>
+                            <div>
+                                <p>Telefono:</p>
+                                <input name="telefono" placeholder="Teléfono" value={formData.telefono} onChange={handleChange} />
+                            </div>
+                            <span>
+                                <div>
+                                    <p>Fecha: </p>
+                                    <input name="fecha"    placeholder="Fecha"    value={formData.fecha} onChange={handleChange} type="date" />  
+                                </div>
+                                <div>
+                                    <p>Hora:<input name="hora" placeholder="Hora" value={formData.hora} onChange={handleChange} type="time" /></p>
+                                </div>
+                            </span>
+                            <div>
+                                <p>Motivo:</p>
+                                <input name="motivo" placeholder="Motivo" value={formData.motivo} onChange={handleChange} />
+                            </div>
+                            <div>
+                                <p> Estatus: </p>
+                                <select name="estado" value={formData.estado} onChange={handleChange}>
+                                    <option value="confirmada"> Confirmada </option>
+                                    <option value="cancelada"> Cancelada </option>
+                                    <option value="vencida"> Vencida </option>
+                                </select>
+                            </div>
+
+                        </section>
+
                     
                     </section>
 
-                    <footer>
-                        <button type="submit">Guardar</button>
+                    <footer className="section--actualizar-cita-footer">
+                        <button type="submit" className="button-1">Guardar</button>
                         
-                        <button type="button" onClick={() => navigate(`/lista`)} >Cancelar</button>
+                        <button type="button" onClick={() => navigate(`/lista`)} className="button-2">Cancelar</button>
                     </footer>
                 </form>
             </article>
