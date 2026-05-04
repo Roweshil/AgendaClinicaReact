@@ -24,9 +24,9 @@
 }
 
 .button-2 {
-  background-color: rgb(255, 255, 255);
-  color: black;
-  border: 1px solid grey;
+  background-color: #DFE3E7;
+  color: #1A2B4C;
+  border-style: none;
   padding: 12px 20px;
   border-radius: 15px;
   font-size: 14px;
@@ -56,7 +56,7 @@
 }
 
 .header {
-  background-color: #f7f5f2;
+  background-color: #DFE3E7;
   box-shadow: 0 0 3px 0.1px #00000054;
   color: #2A2F45;
   height: 50px;
@@ -93,7 +93,7 @@
 /* Estilos del Bar general */
 
 .medico-bar {
-  background-color: #f7f5f2;
+  background-color: #FFFF;
   color: #000000;
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.219);
   align-items: center;
@@ -528,7 +528,7 @@
 /* Estilos de las citas */
 
 .cita-card {
-  background-color: #f7f5f2;
+  background-color: #ffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
