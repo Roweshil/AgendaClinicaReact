@@ -99,27 +99,20 @@ export function ListaCitas() {
     return (
         <section className="section--medico-lista">
             <header className="section--medico-lista-header">
-                <article>
+                <article className="section--medico-lista-title">
                     <h2>Gestión de Citas.</h2>
                     <p>{citas.length} citas registradas.</p>
                 </article>
                 
-                <section>
-                    <select className="filtro-select" onChange={e => dispatch({ type: "SET_DIA", payload: e.target.value })}>
-                        <option value="todas">Todas</option>
-                        <option value="hoy">[ Hoy ]</option>
-                        <option value="manana">[ Mañana ]</option>
-                        <option value="semana">[ Esta semana ]</option>
-                    </select>
-
+                <section className="section--medico-lista-filtros">
                     <div className="filtros-dia">
                         {filtrosDia.map(filtro => (
                             <button
                             key={filtro.value}
-                            className={filtros.dia === filtro.value ? "filtro-btn activo" : "filtro-btn"}
+                            className={filtros.dia === filtro.value ? "filtro-btn-dia activo" : "filtro-btn-dia"}
                             onClick={() => dispatch({ type: "SET_DIA", payload: filtro.value })}
                             >
-                            {filtro.label}
+                                {filtro.label}
                             </button>
                         ))}
                     </div>
@@ -128,19 +121,13 @@ export function ListaCitas() {
                         {filtrosEstado.map(filtro => (
                             <button
                             key={filtro.value}
-                            className={filtros.estado === filtro.value ? "filtro-btn activo" : "filtro-btn"}
+                            className={filtros.estado === filtro.value ? "filtro-btn-estado activo" : "filtro-btn-estado"}
                             onClick={() => dispatch({ type: "SET_ESTADO", payload: filtro.value })}
                             >
-                            {filtro.label}
+                                {filtro.label}
                             </button>
                         ))}
                     </div>
-                    
-                    <select className="filtro-select" onChange={e => dispatch({ type: "SET_ESTADO", payload: e.target.value })}>
-                        <option value="confirmada">Confirmadas</option>
-                        <option value="cancelada">Canceladas</option>
-                        <option value="vencida">Vencidas</option>
-                    </select>      
                 </section>
             </header>
             <motion.div
