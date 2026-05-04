@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom"
 import { formatCita } from '../../utils/fechaUtils.js'
 import { BotonEliminar } from './BotonEliminar.jsx'
 
+//<p>Fecha de creacion: {formatCita(cita).creacion} </p>
+
 export function ListaCitas() {
     const navigate = useNavigate()
 
@@ -98,8 +100,8 @@ export function ListaCitas() {
         <section className="section--medico-lista">
             <header className="section--medico-lista-header">
                 <article>
-                    <h2>Aqui puedes gestionar tus citas.</h2>
-                    <p>Citas registradas: {citas.length}</p>
+                    <h2>Gestión de Citas.</h2>
+                    <p>{citas.length} citas registradas.</p>
                 </article>
                 
                 <section>
@@ -156,20 +158,23 @@ export function ListaCitas() {
                         variants={item}
                         transition={{ duration: 0.5 }}
                     >
-                        <header>
-                            <p>Estado: {cita.estado}</p>
+                        <header className="cita-card-header">
+                            <p>{cita.estado}</p>
+                            <p>{formatCita(cita).fecha} </p>
                         </header>
 
                         <section className="cita-info">
-                            <p>Fecha de creacion: {formatCita(cita).creacion} </p>
-                            
-                            <p>{cita.paciente}</p>
-                            <p>Fecha: {formatCita(cita).fecha} </p>
-                            <p>Hora: {cita.hora}hrs</p>
-                            <p>Motivo: {cita.motivo}</p>
+                            <div>
+                                <p>{cita.paciente}</p>
+                                <p>Hora: {cita.hora}hrs</p>
+                            </div>
+                            <div>
+                                <p>Motivo:</p>
+                                <p>{cita.motivo}</p>
+                            </div>
                         </section>
 
-                        <footer>
+                        <footer className="section--medico-lista-buttons">
                             <button onClick={() => navigate(`/detalle?uuid=${cita.uuid}`)}>Detalles</button>
                             <button onClick={() => navigate(`/actualizar?uuid=${cita.uuid}`)}>Editar</button>
                             <BotonEliminar uuid={cita.uuid} />

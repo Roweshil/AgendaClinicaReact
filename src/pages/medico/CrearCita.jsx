@@ -55,9 +55,11 @@ export function CrearCita() {
                     <h1>Registra una nueva cita</h1>
                 </article>
                 <article className="section--crear-cita-status">
-                    <p>Estado inicial</p>
-                    <h2>Pendiente</h2>
-                    <p>La cita aparecera en la agenda una vez guardada</p>
+                    <div>
+                        <p>ESTADO INICIAL</p>
+                        <p className="section--crear-cita-status-pendiente">Pendiente</p>
+                    </div>
+                    <p>La cita aparecera en la agenda una vez guardada.</p>
                 </article>
             </section>
             <article  className="section--crear-cita-card" >
@@ -75,21 +77,23 @@ export function CrearCita() {
                             <p>Telefono: </p>
                             <input name="telefono" placeholder="0000000000" value={formData.telefono} onChange={handleChange} />
                         </div>
-                        <div>
-                            <p>Fecha: </p>
-                            <input name="fecha"    placeholder="Fecha"    value={formData.fecha}    onChange={handleChange} type="date" /> 
-                        </div>
-                        <div>
-                            <p>Hora:</p>
-                            <input name="hora" placeholder="Hora" value={formData.hora}     onChange={handleChange} type="time" />
-                        </div>
+                        <span>
+                            <div>
+                                <p>Fecha: </p>
+                                <input name="fecha"    placeholder="Fecha"    value={formData.fecha}    onChange={handleChange} type="date" /> 
+                            </div>
+                            <div>
+                                <p>Hora:</p>
+                                <input name="hora" placeholder="Hora" value={formData.hora}     onChange={handleChange} type="time" />
+                            </div>
+                        </span>
                         <div>
                             <p>Motivo:</p> 
                             <input name="motivo" placeholder="Describe el motivo principal de consulta" value={formData.motivo}     onChange={handleChange} />
                         </div> 
                     </section>
 
-                    <footer>
+                    <footer className="section--crear-cita-footer">
                         <button type="submit" className="button-1">Crear cita</button>
                         <button type="button" onClick={() => navigate(`/lista`)} className="button-2">Cancelar</button>
                     </footer>
