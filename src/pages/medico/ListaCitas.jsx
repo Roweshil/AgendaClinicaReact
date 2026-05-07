@@ -61,7 +61,9 @@ export function ListaCitas() {
 
     const [filtros, dispatch] = useReducer(reducer, initialState)
 
-    const citasFiltradas = citas.filter(cita => {
+    const citasOrdenadas = citas.sort((a, b) => a.fecha.localeCompare(b.fecha))
+
+    const citasFiltradas = citasOrdenadas.filter(cita => {
 
         const [year, month, day] = cita.fecha.split("-")
         const fechaCita = new Date(year, month - 1, day)
@@ -141,30 +143,30 @@ export function ListaCitas() {
                 {citasFiltradas.map((cita) => (
                     <motion.article
                         key={cita.uuid}
-                        className="cita-card"
+                        className={`cita-card ${cita.estado}`}
                         variants={item}
                         transition={{ duration: 0.5 }}
                     >
                         <header className="cita-card-header">
-                            <p>{cita.estado}</p>
+                            <span>{cita.estado.toUpperCase()}</span>
                             <p>{formatCita(cita).fecha} </p>
                         </header>
 
                         <section className="cita-info">
                             <div>
-                                <p>{cita.paciente}</p>
-                                <p>Hora: {cita.hora}hrs</p>
+                                <p className="cita-info-title">{cita.paciente}</p>
+                                <p className="cita-info-subtitle">Hora: {cita.hora}hrs</p>
                             </div>
                             <div>
-                                <p>Motivo:</p>
-                                <p>{cita.motivo}</p>
+                                <p className="cita-info-subtitle">MOTIVO</p>
+                                <p className="cita-info-title">{cita.motivo}</p>
                             </div>
                         </section>
 
                         <footer className="section--medico-lista-buttons">
-                            <button onClick={() => navigate(`/detalle?uuid=${cita.uuid}`)}>Detalles</button>
-                            <button onClick={() => navigate(`/actualizar?uuid=${cita.uuid}`)}>Editar</button>
-                            <BotonEliminar uuid={cita.uuid} />
+                            <button onClick={() => navigate(`/detalle?uuid=${cita.uuid}`)} className="cita-card-button-1">Detalles</button>
+                            <button onClick={() => navigate(`/actualizar?uuid=${cita.uuid}`)} className="cita-card-button-2">Editar</button>
+                            <BotonEliminar uuid={cita.uuid}/>
                         </footer>
                     </motion.article>
                 ))}

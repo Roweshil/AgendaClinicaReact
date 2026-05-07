@@ -57,7 +57,7 @@ export function CrearCita() {
                 <article className="section--crear-cita-status">
                     <div>
                         <p>ESTADO INICIAL</p>
-                        <p className="section--crear-cita-status-pendiente">Pendiente</p>
+                        <p className="section--crear-cita-status-initial">CONFIRMADA</p>
                     </div>
                     <p>La cita aparecera en la agenda una vez guardada.</p>
                 </article>
@@ -70,7 +70,7 @@ export function CrearCita() {
 
                     <section className="section--crear-cita-info">
                         <div>
-                            <p>Paciente:</p> 
+                            <p>Nombre:</p> 
                             <input name="paciente" placeholder="Nombre del paciente" value={formData.paciente} onChange={handleChange} />
                         </div>
                         <div>
@@ -89,7 +89,7 @@ export function CrearCita() {
                         </span>
                         <div>
                             <p>Motivo:</p> 
-                            <input name="motivo" placeholder="Describe el motivo principal de consulta" value={formData.motivo}     onChange={handleChange} />
+                            <input name="motivo" placeholder="Describe el motivo principal de la cita" value={formData.motivo}     onChange={handleChange} />
                         </div> 
                     </section>
 

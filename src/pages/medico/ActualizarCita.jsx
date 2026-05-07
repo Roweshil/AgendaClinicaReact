@@ -30,7 +30,7 @@ export function ActualizarCita() {
             fecha: cita.fecha,
             hora: cita.hora,
             motivo: cita.motivo,
-            estado: cita.estado
+            estado: ''
             })
         }
         }
@@ -115,9 +115,9 @@ export function ActualizarCita() {
                             <div>
                                 <p> Estatus: </p>
                                 <select name="estado" value={formData.estado} onChange={handleChange}>
+                                    <option value="" disabled>Selecciona un estado</option>
                                     <option value="confirmada"> Confirmada </option>
                                     <option value="cancelada"> Cancelada </option>
-                                    <option value="vencida"> Vencida </option>
                                 </select>
                             </div>
 

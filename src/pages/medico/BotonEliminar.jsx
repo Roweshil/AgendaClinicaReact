@@ -21,7 +21,7 @@ export function BotonEliminar({ uuid }) {
 
     return (
     <>
-      <button onClick={() => setConfirmar(true)}>Eliminar</button>
+      <button onClick={() => setConfirmar(true)} className="cita-card-button-3">Eliminar</button>
 
       {createPortal(
         <AnimatePresence>
