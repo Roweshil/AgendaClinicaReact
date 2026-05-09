@@ -17,6 +17,7 @@ export function Header() {
 
     return (
         <header className="header">
+            <img src="src/assets/logoHorizontal.png" alt="" />
             {loading ? (
                 <span>Cargando</span>  // no muestra nada mientras carga
             ) : user ? (
