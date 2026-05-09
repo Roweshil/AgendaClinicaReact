@@ -1,9 +1,11 @@
 import { useState } from "react"
 import { useAuth } from "../hooks/useAuth.js"
 import { useNavigate } from 'react-router-dom'
+import { createPortal } from "react-dom"
+import { motion, AnimatePresence } from "framer-motion"
 
 export function Login() {
-
+  const [confirmar, setConfirmar] = useState(false)
   const { validate } = useAuth()
   const navigate = useNavigate()
 
@@ -29,7 +31,6 @@ export function Login() {
 
       if(res.ok) {
         await validate() 
-        console.log("Login exitoso")
         navigate('/')
       }
     } catch (error) {
@@ -40,26 +41,51 @@ export function Login() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      
-      <input
-        type="email"
-        placeholder="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
+    <>
+      <button onClick={() => setConfirmar(true)} className="button-1">INICIAR SESION</button>
 
-      <input
-        type="password"
-        placeholder="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
+      {createPortal(
+        <AnimatePresence>
+          {confirmar && (
+            <motion.div
+              className="modal-overlay"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <motion.div
+                className="modal modal-login"
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+              >
+                <form onSubmit={handleSubmit} className="modal-login-form">
+                  
+                  <input
+                    type="email"
+                    placeholder="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
 
-      <button type="submit">
-        Login
-      </button>
+                  <input
+                    type="password"
+                    placeholder="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
 
-    </form>
+
+                    <button type="submit" className="button-1 modal-button-login">Entrar</button>
+                </form>
+
+                <button className="button-2 modal-button-login"onClick={() => setConfirmar(false)}>Cancelar</button>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>,
+        document.body // ← se renderiza directo en el body, fuera de la tarjeta
+      )}
+    </>
   )
 }

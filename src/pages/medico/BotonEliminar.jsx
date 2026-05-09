@@ -39,8 +39,8 @@ export function BotonEliminar({ uuid }) {
                 exit={{ scale: 0.9, opacity: 0 }}
               >
                 <p>¿Eliminar esta cita?</p>
-                <button className="btn-confirmar" onClick={handleBorrar}>Confirmar</button>
-                <button className="btn-cancelar"onClick={() => setConfirmar(false)}>Cancelar</button>
+                <button className="button-1" onClick={handleBorrar}>Confirmar</button>
+                <button className="button-2"onClick={() => setConfirmar(false)}>Cancelar</button>
               </motion.div>
             </motion.div>
           )}

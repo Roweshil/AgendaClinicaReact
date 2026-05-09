@@ -1,4 +1,3 @@
-import { article } from 'framer-motion/client'
 import { useMedico } from '../../hooks/useMedico.js'
 
 export function Home() {

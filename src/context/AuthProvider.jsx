@@ -3,14 +3,12 @@ import { useEffect, useState, } from "react"
 import { AuthContext } from "../hooks/useAuth.js"
 
 export function AuthProvider ({ children }) {
-  console.log("se monto el provider de nuevo")
   
   const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(true)
 
 
   const validate = async () => {
-    console.log("el user es:", user)
             try {
                 const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/me`, {
                     credentials: "include"

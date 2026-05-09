@@ -51,15 +51,27 @@
 
 /* Estilos del header, se comparte en todas las paginas */
 
-.btn-tutorial {
-  display: none;
-}
-bu
 .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #DFE3E7;
   box-shadow: 0 0 3px 0.1px #00000054;
   color: #2A2F45;
+  width: 100%;
   height: 6dvh;
+}
+
+.section--header-not-logged {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  min-height: 6dvh;
+  padding: 0 2rem;
+}
+
+.section--header-not-logged p {
+  font-size: 1.5rem;
 }
 
 .section--header-logged {
@@ -67,26 +79,14 @@ bu
   justify-content: space-around;
   align-items: center;
   height: 100%;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 .section--header-logged p {
   font-weight: bold;
-}
-
-.header button{
-  background-color: #426086;
-  color: rgb(255, 255, 255);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-}
-
-.header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
+  font-size: 1.2rem;
+  color: #001C38;
 }
 
 
@@ -96,7 +96,6 @@ bu
   background-color: #FFFF;
   color: #000000;
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.219);
-  border-radius: 10px;
   height: 6dvh;
 }
 
@@ -138,15 +137,85 @@ bu
 
 /* Estilos del Dashboard */
 
-.public-dashboard {
-  background-color: rgb(166, 209, 207);
+.section--public-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  min-height: 90dvh;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #06213dd7, #000000d5), url('src/assets/PublicBackground.jpg');
+  background-size: cover;      /* cubre todo el contenedor */
+  background-position: center; /* centra la imagen */
+  background-repeat: no-repeat;
+}
+
+.section--public-dashboard-title {
+  color: #EDF1F5;
+  font-size: 30px;
+}
+
+.section--public-dashboard-p {
+  color: #DFE3E7;
+}
+
+.section--public-dashboard button {
+  width: 60%;
+  padding: 1rem;
+}
+
+.section--public-dashboard-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding:3rem 1rem;
+}
+
+.section--public-dashboard-card1 {
+  border-left: 6px solid #1A2B4C;
+}
+
+.section--public-dashboard-card2 {
+  border-left: 6px solid #4A90E2;
+}
+
+.section--public-dashboard-card3 {
+  border-left: 6px solid #008679;
+}
+
+.section--public-cta {
+  color: white;
+  background-color: #0F3155;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  gap: 2rem;
+  padding:3rem 1rem;
+  min-height: 40dvh;
 }
 
+.section--public-cta a {
+  color: white;
+}
+
+.section--public-cta nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.section--public-cta-button-1 {
+  background-color: #4EB4F4;
+  color: #0F3155;
+}
+
+.section--public-cta-button-2 {
+  background-color: transparent;
+  border: 1px solid #b4b1b1;
+  color: white;
+}
 
   /* Estilos del Dashboard del admin */
 
@@ -159,13 +228,13 @@ bu
 .medico-dashboard {
   display: flex;
   flex-direction: column;
-  height:100%;
+  height: 94dvh;
   justify-content: space-between;
 }
 
 .medico-content  {
   max-width: 100%;
-  height: 87.5dvh;
+  height: 88dvh;
   overflow-y: auto; 
 }
 
@@ -772,23 +841,6 @@ bu
   justify-content: space-around;
 }
 
-.modal button{
-  background-color: #b3a297;
-  color: rgb(0, 0, 0);
-  padding: 2rem 1rem;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-confirmar:hover {
-  background-color: #b91c1c;
-}
-
-.btn-cancelar:hover {
-  background-color: #cfccca;
-}
-
 /* Estilos 404 */
 
 .not-found {
@@ -813,6 +865,27 @@ bu
     0 0 25px rgba(91, 141, 239, 0.2);
 }
 
+/*Estilos del login */
+
+.modal-login {
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.modal-login-form input {
+  border: none;
+  background-color: #DFE3E7;
+  padding:1.5rem 1rem;
+  border-radius: 5px;
+
+}
 
 
 

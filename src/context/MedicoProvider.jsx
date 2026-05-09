@@ -9,7 +9,6 @@ export function MedicoProvider ({ children }) {
     const [citas, setCitas] = useState([])
 
     useEffect(() => {
-        console.log("MedicoProvider montado")
         
         if(loading || !user ) return
         

@@ -22,14 +22,16 @@ export function Header() {
             ) : user ? (
                 <section className="section--header-logged">
                     <p>{user?.nombre?.toUpperCase()} {user?.apellido?.toUpperCase()}</p>
-                    <button className="btn-tutorial">TUTORIALES DE USO</button>
-                    <button onClick={handleLogout}>Cerrar sesión</button>
+                    <button className="btn-tutorial button-2">TUTORIALES DE USO</button>
+                    <button onClick={handleLogout} className="button-2 cita-card-button-3" >Cerrar sesión</button>
                 </section>
             ) : (
-                <nav>
-                    <span>No has iniciado sesión</span>
-                    <Login />
-                </nav>
+                <section className="section--header-not-logged">
+                    <nav>
+                        <Login />
+                    </nav>
+                </section>
+
             )}
         </header>
     )
