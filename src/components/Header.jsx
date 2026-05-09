@@ -17,7 +17,7 @@ export function Header() {
 
     return (
         <header className="header">
-            <img src="src/assets/logoHorizontal.png" alt="" />
+            <img src="https://res.cloudinary.com/dj7fmczq9/image/upload/f_auto,q_auto/logoHorizontal_nojgyx" alt="" />
             {loading ? (
                 <span>Cargando</span>  // no muestra nada mientras carga
             ) : user ? (
