@@ -32,6 +32,8 @@ export function Login() {
       if(res.ok) {
         await validate() 
         navigate('/')
+      } else {
+        alert("Datos incorrectos intente nuevamente")
       }
     } catch (error) {
       console.error(error, 'login')

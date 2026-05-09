@@ -901,35 +901,18 @@
   /*  Contenedor global de la app */
 
   .layout {
-    display: grid;
-    max-height: 100dvh;
-    width: 100dvw;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 12fr;
-    grid-template-areas: 
-      "header"
-      "viewport";
-  }
 
-  .layout {
-    grid-template-rows: 1fr 12fr 1fr;
-    grid-template-areas: 
-      "header"
-      "viewport"
-      "footer";
   }
 
   /* Estilos del boton para pagina de tutoriales */
 
-  .btn-tutorial {
-    display: block;
-  }
+
   
 
   /* Estilos del header, se comparte en todas las paginas */
 
   .header {
-    grid-area: header;
+    justify-content: space-between;
     padding-left: 3rem;
     padding-right: 3rem;
   }
@@ -959,8 +942,12 @@
     gap: 9rem;
   }
 
-  .public-dashboard {
+  .section--public-dashboard {
     grid-area: viewport;
+    background: linear-gradient(135deg, #06213dd7, #000000d5), url('https://res.cloudinary.com/dj7fmczq9/image/upload/f_auto,q_auto/backgroundRoweWorksDesktop_kjljyi');
+    background-size: cover;      /* cubre todo el contenedor */
+    background-position: center; /* centra la imagen */
+    background-repeat: no-repeat;
   }
   /* Estilos del Dashboard del admin */
 
