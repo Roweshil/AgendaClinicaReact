@@ -1,7 +1,14 @@
+import { useAuth } from '../../hooks/useAuth.js'
 import { useMedico } from '../../hooks/useMedico.js'
 
+
 export function Home() {
+    const {user} = useAuth()
     const { citas } = useMedico()
+
+    const nombreCliente = user.nombre.charAt(0).toUpperCase() + user.nombre.slice(1);
+
+    const apellidoCliente = user.apellido.charAt(0).toUpperCase() + user.apellido.slice(1); 
 
     const hoy = new Date().toLocaleDateString('en-CA')
     const horaActual = new Date().toLocaleTimeString('en-GB', { 
@@ -36,52 +43,52 @@ export function Home() {
     .filter(c => c.estado === 'confirmada')
 
     return (
-        <div className="section--medico-home">
+        <div className="home">
+                <p className="home__name">¡Qué gusto verte {nombreCliente} {apellidoCliente}!</p>
                 { siguienteCitaHoy ? (
-                    <section className="section--medico-home-header">
-                        <article className="section--medico-home-alert">
-                            <div className="section--medico-home-alert-count">
+                    <section className="home__header">
+
+                        <article className="home__alert">
+                            <div className="home__count">
                                 <h2>{citaHoy.length} {citaHoy.length === 1 ? 'cita programada' : 'citas programadas'}</h2>
                                 <p>Tienes una jornada activa hoy.</p>
                             </div>
-                            <div className="section--medico-home-alert-today">
-                                HOY
+                            <div>
+                                <span className="label-today">HOY</span>
                             </div>
                         </article>
-                        <article className="section--medico-home-next">
+                        <article className="siguiente-cita">
                             
-                            <p className="section--medico-home-next-title">PROXIMA CITA</p>
-                            <div>
+                            <p className="siguiente-cita__title">PROXIMA CITA</p>
+                            <div className="siguiente-cita__card">
                                 <span>
-                                    <p className="section--medico-home-next-hour">{siguienteCita.hora}</p>
+                                    <p className="siguiente-cita__hora">{siguienteCita.hora}</p>
                                 </span>
-                                <p className="section--medico-home-next-hour">{siguienteCita.paciente}</p>
+                                <p className="siguiente-cita__hora">{siguienteCita.paciente}</p>
                             </div>
                         </article>
                     </section>
                 ) : (
-                    <section className="section--medico-home-header">
-                        <article className="section--medico-home-alert">
+                    <section className="home__header">
+                        <article className="home__alert">
                             <div>
                                 <h2>No hay citas registradas para hoy</h2>
                             </div>
                         </article>
                         {siguienteCita ? (
-                        <article className="section--medico-home-next">
-                            <p className="section--medico-home-next-title">PROXIMA CITA</p>
-                            <div>
+                        <article className="siguiente-cita">
+                            <p className="siguiente-cita__title">PROXIMA CITA</p>
+                            <div className="siguiente-cita__card">
                                 <span>
-                                    <p className="section--medico-home-next-hour">{siguienteCita.fecha}</p>
-                                    <p className="section--medico-home-next-hour">{siguienteCita.hora}</p>
+                                    <p className="siguiente-cita__hora">{siguienteCita.fecha}</p>
+                                    <p className="siguiente-cita__hora">{siguienteCita.hora}</p>
                                 </span>
-                                <p className="section--medico-home-next-hour">{siguienteCita.paciente}</p>
+                                <p className="siguiente-cita__hora">{siguienteCita.paciente}</p>
                             </div>
                         </article>
                         ) : (
-                            <article className="section--medico-home-next">
-                                <div>
-                                    Agenda una cita para comenzar.
-                                </div>
+                            <article className="siguiente-cita">
+                                <p className="siguiente-cita__hora">Agenda una cita para comenzar.</p>
                             </article>
                         )}
                     </section>

@@ -15,3 +15,6 @@ export function Dashboard() {
     if(user.rol === 'admin') return <AdminDashboard />
     if(user.rol === 'medico') return <MedicoDashboard />
 }
+
+
+

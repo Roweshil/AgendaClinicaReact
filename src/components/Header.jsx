@@ -17,18 +17,19 @@ export function Header() {
 
     return (
         <header className="header">
-            <img src="https://res.cloudinary.com/dj7fmczq9/image/upload/f_auto,q_auto/logoHorizontal_nojgyx" alt="" />
+
             {loading ? (
                 <span>Cargando</span>  // no muestra nada mientras carga
             ) : user ? (
-                <section className="section--header-logged">
-                    <p>{user?.nombre?.toUpperCase()} {user?.apellido?.toUpperCase()}</p>
-                    <button className="btn-tutorial button-2">TUTORIALES DE USO</button>
-                    <button onClick={handleLogout} className="button-2 cita-card-button-3" >Cerrar sesión</button>
+                <section className="header__logged">
+                    <img src="https://res.cloudinary.com/dj7fmczq9/image/upload/f_auto,q_auto/logoHorizontal_nojgyx" alt="" className="header__img"/>
+                    <button className="btn-tutorial btn--secundario">TUTORIALES DE USO</button>
+                    <button onClick={handleLogout} className="btn section--header-button-logout" >Cerrar sesión</button>
                 </section>
             ) : (
-                <section className="section--header-not-logged">
+                <section className="header__not-logged">
                     <nav>
+                        <img src="https://res.cloudinary.com/dj7fmczq9/image/upload/f_auto,q_auto/logoHorizontal_nojgyx" alt="" className="header__img" />
                         <Login />
                     </nav>
                 </section>

@@ -24,9 +24,9 @@ export function MedicoDashboard() {
         <MedicoProvider>
             { user ? (
                 <>
-                    <main className="medico-dashboard">
+                    <main className="medico-content">
                         
-                        <section className="medico-content">
+                        <section className="medico-dashboard">
                             <AnimatePresence mode="wait">
                                 <Routes location={location} key={location.pathname}>
                                     <Route path="/" element={<Home />} />

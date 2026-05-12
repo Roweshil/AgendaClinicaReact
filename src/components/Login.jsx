@@ -33,7 +33,7 @@ export function Login() {
         await validate() 
         navigate('/')
       } else {
-        alert("Datos incorrectos intente nuevamente")
+        alert("El correo o la contraseña son incorrectas, verificar información")
       }
     } catch (error) {
       console.error(error, 'login')
@@ -44,7 +44,7 @@ export function Login() {
 
   return (
     <>
-      <button onClick={() => setConfirmar(true)} className="button-1">INICIAR SESION</button>
+      <button onClick={() => setConfirmar(true)} className="btn btn--primario">INICIAR SESION</button>
 
       {createPortal(
         <AnimatePresence>
@@ -78,10 +78,10 @@ export function Login() {
                   />
 
 
-                    <button type="submit" className="button-1 modal-button-login">Entrar</button>
+                    <button type="submit" className="btn btn--primario">Entrar</button>
                 </form>
 
-                <button className="button-2 modal-button-login"onClick={() => setConfirmar(false)}>Cancelar</button>
+                <button className="btn btn--secundario"onClick={() => setConfirmar(false)}>Cancelar</button>
               </motion.div>
             </motion.div>
           )}
