@@ -24,7 +24,7 @@ export function Header() {
                 <section className="header__logged">
                     <img src="https://res.cloudinary.com/dj7fmczq9/image/upload/f_auto,q_auto/logoHorizontal_nojgyx" alt="" className="header__img"/>
                     <button className="btn-tutorial btn--secundario">TUTORIALES DE USO</button>
-                    <button onClick={handleLogout} className="btn section--header-button-logout" >Cerrar sesión</button>
+                    <button onClick={handleLogout} className="btn header_btn--logout" >Cerrar sesión</button>
                 </section>
             ) : (
                 <section className="header__not-logged">

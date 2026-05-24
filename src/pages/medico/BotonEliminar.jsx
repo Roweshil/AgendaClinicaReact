@@ -21,7 +21,7 @@ export function BotonEliminar({ uuid }) {
 
     return (
     <>
-      <button onClick={() => setConfirmar(true)} className="cita-card-button-3">Eliminar</button>
+      <button onClick={() => setConfirmar(true)} className="btn citas__btn cita__delete-btn">Eliminar</button>
 
       {createPortal(
         <AnimatePresence>
@@ -39,8 +39,8 @@ export function BotonEliminar({ uuid }) {
                 exit={{ scale: 0.9, opacity: 0 }}
               >
                 <p>¿Eliminar esta cita?</p>
-                <button className="button-1" onClick={handleBorrar}>Confirmar</button>
-                <button className="button-2"onClick={() => setConfirmar(false)}>Cancelar</button>
+                <button className="btn btn--primario" onClick={handleBorrar}>Confirmar</button>
+                <button className="btn btn--secundario"onClick={() => setConfirmar(false)}>Cancelar</button>
               </motion.div>
             </motion.div>
           )}

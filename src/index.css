@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  height: 100dvh;
+  width: 100dvw;
+}
+
 body {
   margin: 0;
   font-family: 'Manrope', 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
@@ -20,25 +25,4 @@ img {
 
 button {
   font: inherit;
-}
-
-/* base — móvil */
-html {
-  font-size: 14px;
-}
-
-/*Iphone SE */
-@media (max-width: 375px) {
-  h1, h2, h3, p {
-  font-size: 0.8rem; 
-  }
-  .layout { padding: 12px; }
-  .cita-card { padding: 12px; }
-}
-
-/* desktop */
-@media (min-width: 768px) {
-  html {
-    font-size: 16px; 
-  }
 }

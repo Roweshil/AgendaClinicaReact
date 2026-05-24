@@ -1,13 +1,12 @@
 /* Contenedor global de la app */
 
 .layout {
-  background: #EDF1F5;
+  background: #f5f0ed;
   display: flex;
   flex-direction: column;
-  max-height: 100dvh;
 }
 
-.p {
+.p, h1, h2, h3 {
   margin: 0;
 }
 
@@ -101,6 +100,12 @@
   width: 100%;
 }
 
+.header_btn--logout {
+  padding: 0.3rem;
+  font-size: small;
+}
+
+
 .header__logged p {
   font-weight: bold;
   font-size: 1.2rem;
@@ -120,7 +125,7 @@
   background-color: #FFFF;
   color: #000000;
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.219);
-  height: 6dvh;
+  height: 10%;
 }
 
 .medico-navbar_title {
@@ -260,7 +265,7 @@
 .medico-content {
   display: flex;
   flex-direction: column;
-  height: 94dvh;
+  max-height: 94dvh;
   justify-content: space-between;
 }
 
@@ -353,13 +358,13 @@
   font-size: large;
 }
 
-.section--medico-home-notifications {
+.notifications {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.section--medico-home-cards {
+.notifications_cards {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -373,30 +378,25 @@
   color: #5A5F62;
 }
 
-.section--medico-home-cards p, h3 {
-  padding: 0;
-  margin: 0;
-}
-
-.section--medico-home-cards-count-confirmadas {
+.notification_confirmadas {
   font-weight: 1000;
   font-size: 20px;
   color: #008679;
 }
 
-.section--medico-home-cards-count-vencidas {
+.notification_vencidas {
   font-weight: 1000;
   font-size: 20px;
   color: #95a5a6;
 }
 
-.section--medico-home-cards-count-canceladas {
+.notification_canceladas {
   font-weight: 1000;
   font-size: 20px;
   color: #e74c3c;
 }
 
-.section--medico-schedule {
+.schedule {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -404,18 +404,18 @@
   border-radius: 10px;
 }
 
-.section--medico-schedule h2 {
+.schedule h2 {
   margin: 0;
 }
 
-.section--medico-schedule ul {
+.schedule ul {
   display: flex;
   flex-direction: column;
   padding: 0;
   gap: 1rem;
 }
 
-.section--medico-schedule-card {
+.schedule__card {
   display: flex;
   justify-content: space-between;
   background-color: rgb(248, 248, 248);
@@ -427,21 +427,26 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.103);
 }
 
-.section--medico-schedule-card-data {
+.schedule__data {
   display: flex;
   font-size: medium;
 }
 
-.section--medico-schedule-card-data p {
+.schedule- {
   padding: 0 1rem;
 }
 
-.section--medico-schedule-card-data p:first-child {
-  border-right: 1px solid #8d9195c2;
+.schedule__info {
   font-weight: bold;
+  padding: 0 1rem;
 }
 
-.section--medico-home-news {
+
+.schedule__date {
+  border-right: 1px solid #8d9195c2;
+}
+
+.news {
   display: flex;
   justify-content: center;
   background-color: #008679;
@@ -452,13 +457,13 @@
 
 /* Estilos de la lista de citas */
 
-.section--medico-lista {
+.lista-citas {
   display: flex;
   flex-direction: column;
   padding: 0 1.5rem;
 }
 
-.section--medico-lista-header {
+.lista-citas__header {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -468,14 +473,14 @@
   border-radius: 10px;
 }
 
-.section--medico-lista-title {
+.lista-citas__title {
   display: flex;
   flex-direction: column;
   text-align: left;
   font-size: 20px;
 }
 
-.medico-lista-citas {
+.lista__elements {
   display: grid;
   overflow-y: auto;
   max-height: 65dvh;
@@ -486,24 +491,23 @@
 
 /* Estilos de los filtros */
 
-.section--medico-lista-filtros {
+.filtros {
   display: flex;
-  flex-direction: column;
   gap: 1rem;
   width: 100%;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .filtros-estado {
-  display: flex;
-  justify-content: space-between;
+  /*TODO ajustar la visualizacion de filtros */
 }
 
 .filtros-dia {
-  display: flex;
-  justify-content: space-between;
+  /*TODO ajustar la visualizacion de filtros */
 }
 
-.filtro-btn-dia {
+.filtro-dia__btn {
   padding: 1rem;
   border-radius: 999px; 
   border: 1.5px solid #cbd5e1;
@@ -515,13 +519,13 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.103);
 }
 
-.filtro-btn-dia.activo {
+.filtro-dia__btn.activo {
   background: #001C38;
   border-style: none;
   color: #fff;
 }
 
-.filtro-btn-estado {
+.filtro-estado__btn {
   padding: 1rem;
   border-radius: 999px; 
   border: 1.5px solid #cbd5e1;
@@ -533,7 +537,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.103);
 }
 
-.filtro-btn-estado.activo {
+.filtro-estado__btn.activo {
   border-color: #4EB4F4;
   color: #4EB4F4;
 }
@@ -554,6 +558,11 @@
 .cita-card p {
   margin: 0;
   font-weight: 500;
+}
+
+.cita-card__header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .cita-card.confirmada {
@@ -599,39 +608,21 @@
   padding: 0 1rem;
 }
 
-.cita-info-title {
+.cita-title {
   font-weight: 600;
   font-size: 20px;
   color: #2A486D;
 }
 
-.cita-info-subtitle {
+.cita-subtitle {
   color:  #889697;
 }
-
-.cita-card-button-1 {
-  color: #2A486D;
-}
-
-.cita-card-button-2 {
-  color: #4EB4F4;
-}
-
-.cita-card-button-3 {
-  color: #e74c3c;
-}
-
-.cita-card-header {
+.cita__buttons {
   display: flex;
   justify-content: space-between;
 }
 
-.section--medico-lista-buttons {
-  display: flex;
-  justify-content: space-between;
-}
-
-.section--medico-lista-buttons button {
+.citas__btn {
   border-radius: 5px;
   border-style: none;
   padding: 0.5rem 1.5rem;
@@ -639,16 +630,29 @@
   background-color: #EDF1F5;
 }
 
+.cita__detail-btn {
+  color: #2A486D;
+}
+
+.cita__edit-btn {
+  color: #4EB4F4;
+}
+
+.cita__delete-btn {
+  color: #e74c3c;
+}
+
 /* Estilos de la actualizacion de citas */
 
-.section--actualizar-cita {
+.actualizar-cita {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   padding: 0 1.5rem;
+
 }
 
-.section--actualizar-cita-header {
+.actualizar-cita__header {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -657,27 +661,23 @@
   gap: 1rem;
 }
 
-.section--actualizar-cita header h1, h2, p {
-  margin: 0;
-}
-
-.section--actualizar-cita-card {
+.actualizar-cita__card {
   display: flex;
   flex-direction: column;
   border-radius: 15px;
 }
 
-.section--actualizar-cita-card form {
+.actualizar-cita__card form {
   display: flex;
   flex-direction: column;
 }
 
-.section--actualizar-cita-info {
+.actualizar-info {
   display: flex;
   flex-direction: column;
 }
 
-.section--actualizar-cita-info div {
+.actualizar-info div {
   display: flex;
   flex-direction: column;
   align-items:stretch  ;
@@ -687,42 +687,37 @@
   margin-top: 1rem;
 }
 
-.section--actualizar-cita-info span {
+.actualizar-info span {
   display: flex;
   justify-content: space-between;
 }
 
-.section--actualizar-cita-info p {
+.actualizar-info p {
   margin: 0;
 }
 
-.section--actualizar-cita-info input {
+.actualizar-info input {
   border: none;
   background-color: #DFE3E7;
   padding:1.5rem 1rem;
   border-radius: 5px;
 }
 
-.section--actualizar-cita-info select {
+.actualizar-info select {
   border: none;
-  background-color: #DFE3E7;
   padding:1.5rem 1rem;
   border-radius: 5px;
 }
 
-.section--actualizar-cita-footer {
+.actualizar-cita__footer {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.section--actualizar-cita-footer button {
-    border-radius: 5px;
-}
-
 /* Estilos del detalle de citas */
-.section--detalle-cita-info {
+.detalle-info {
   border: none;
   background-color: #DFE3E7;
   padding:1.5rem 1rem;
@@ -731,14 +726,14 @@
 
 /* Estilos de la creacion de citas */
 
-.section--crear-cita {
+.crear-cita {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   padding: 0 1.5rem;
 }
 
-.section--crear-cita-header {
+.crear-cita__header {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -747,7 +742,7 @@
   gap: 1rem;
 }
 
-.section--crear-cita-header h1, h2, p {
+.crear-cita__header h1, h2, p {
   margin: 0;
 }
 
@@ -755,7 +750,7 @@
   color: #2A486D;
 }
 
-.section--crear-cita-status {
+.crear-cita__status {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 1rem;
@@ -765,16 +760,16 @@
   font-weight: 500;
 }
 
-.section--crear-cita-status div {
+.crear-cita__status div {
   display: flex;
   justify-content: space-between;
 }
 
-.section--crear-cita-status p:first-child {
+.crear-cita__status p:first-child {
   font-weight: 700;
 }
 
-.section--crear-cita-status-initial {
+.crear-cita__status--initial {
   padding: 0.3rem 1rem;
   border-radius: 15px;
   font-weight: bold;
@@ -782,23 +777,23 @@
   border: 1px solid #008679;
 }
 
-.section--crear-cita-card {
+.crear-card {
   display: flex;
   flex-direction: column;
   border-radius: 15px;
 }
 
-.section--crear-cita-card form {
+.crear-card form {
   display: flex;
   flex-direction: column;
 }
 
-.section--crear-cita-info {
+.crear-info {
   display: flex;
   flex-direction: column;
 }
 
-.section--crear-cita-info div {
+.crear-info div {
   display: flex;
   flex-direction: column;
   align-items:stretch  ;
@@ -809,26 +804,22 @@
 }
 
 
-.section--crear-cita-info p {
+.crear-info p {
   margin: 0;
 }
 
-.section--crear-cita-info input {
+.crear-info input {
   border: none;
   background-color: #DFE3E7;
   padding:1.5rem 1rem;
   border-radius: 5px;
 }
 
-.section--crear-cita-footer {
+.crear__footer {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-top: 1rem;
-}
-
-.section--crear-cita-footer button {
-    border-radius: 5px;
 }
 
 /* Estilos del Modal de confirmacion de borrado */
@@ -920,7 +911,7 @@
 
 }
 
-/* Estilos desativados en movil */
+/* Estilos desactivados en movil */
 
 .footer {
   display: none;
@@ -943,7 +934,7 @@
 
 /* Estilos para pantallas medianas y grandes */
 
-@media (min-width: 768px){
+@media (min-width: 480px){
 
   /*  Contenedor global de la app */
 
@@ -1017,7 +1008,7 @@
     box-shadow: 4px 0 5px 2px #21A293;
   }
 
-  /* Estilos del home */
+  /* Estilos del home publico */
   .hero {
     background: linear-gradient(135deg, #06213dd7, #000000d5), url('https://res.cloudinary.com/dj7fmczq9/image/upload/f_auto,q_auto/backgroundRoweWorksDesktop_kjljyi');
     background-size: cover;      /* cubre todo el contenedor */
@@ -1145,7 +1136,7 @@
     gap: 2rem;
   }
 
-
+  /*Estilos del dashboard del medico */
 
   .medico-content  {
     display: flex;
@@ -1157,17 +1148,45 @@
     width: 90dvw;
   }
 
-  .medico-bar {
+  .home {
+    justify-content: start;
+    align-items: start;
+  }
+
+  .desktop__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .home__header {
+    width: 65%;
+    justify-content: space-evenly;
+  }
+
+  .notifications {
     flex-direction: column;
-    background-color: #001C38;
-    width: 10dvw;
+    width: 30%;
+    gap: 1rem;
   }
 
-   /* Estilos del Home general */
-
-  .medico-home {
-
+  .notifications_cards {
+    width: 100%;
   }
+
+  .desktop-schedule {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .schedule {
+    width: 65%;
+  }
+
+  .news {
+    width: 30%;
+  } 
 
  /* Estilos de detalle de cita */
   
@@ -1190,7 +1209,7 @@
     gap: 5rem;
   }
 
-  .medico-lista-citas {
+  .lista-citas {
     max-height: 64dvh;
   }
 

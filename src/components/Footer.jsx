@@ -6,7 +6,7 @@ export function Footer() {
                 <ul>
                     <h4>Contacto</h4>
                     <li>Email: roweshil@gmail.com</li>
-                    <li>Teléfono: 55-5555-5555</li>
+                    <li>Teléfono: 55-2428-3503</li>
                 </ul>
                 
                 <ul>
@@ -15,10 +15,12 @@ export function Footer() {
                     <li>Blog</li>
                 </ul>
 
-                
+                <a href="https://wa.me/525524283503" target="_blank" rel="noopener noreferrer">
+                    Consultar por WhatsApp
+                </a>
                 <a href="https://github.com/Roweshil" target="_blank" rel="noreferrer">GitHub ↗</a>
                 <ul>
-                    <li>© 2026 RoweApps - Todos los derechos reservados</li>
+                    <li>© 2026 RoweWorks - Todos los derechos reservados</li>
                     <li>Términos y condiciones</li>
                     <li>Política de privacidad</li>
                     <li>Aviso legal</li>

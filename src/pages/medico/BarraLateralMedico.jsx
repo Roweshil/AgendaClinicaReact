@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 export function BarraLateralMedico() {
     return (
         <aside className="medico-navbar">
-            <h2 className="medico-navbar_title">Mi sistema</h2>
+            <h2 className="medico-navbar_title">Menú</h2>
             <nav>
                 <ul className="medico-navbar_buttons">
                     <li className="medico-navbar_button"><NavLink to="/" className="bar-link">Home</NavLink></li>
