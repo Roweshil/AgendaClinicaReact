@@ -44,7 +44,7 @@ export function Login() {
 
   return (
     <>
-      <button onClick={() => setConfirmar(true)} className="btn btn--primario">INICIAR SESION</button>
+      <button onClick={() => setConfirmar(true)} className="btn btn--primario header_btn--logout">INICIAR SESION</button>
 
       {createPortal(
         <AnimatePresence>
