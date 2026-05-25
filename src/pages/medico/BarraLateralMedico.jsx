@@ -1,16 +1,14 @@
 import { NavLink } from "react-router-dom"
+import { useMediaQuery } from '../../hooks/useMediaQuery.js'
+import { BarraLateralMedicoMobile } from "./BarraLateralMedicoMobile.jsx"
+import { BarraLateralMedicoDesktop } from "./BarraLateralMedicoDesktop.jsx"
+
 
 export function BarraLateralMedico() {
+
+    const isMobile = useMediaQuery('(max-width: 480px)')
+
     return (
-        <aside className="medico-navbar">
-            <h2 className="medico-navbar_title">Menú</h2>
-            <nav>
-                <ul className="medico-navbar_buttons">
-                    <li className="medico-navbar_button"><NavLink to="/" className="bar-link">Home</NavLink></li>
-                    <li className="medico-navbar_button"><NavLink to="/lista" className="bar-link">Consultar</NavLink></li>
-                    <li className="medico-navbar_button"><NavLink to="/crear" className="bar-link">Crear</NavLink></li>
-                </ul>
-            </nav>
-        </aside>
+         isMobile ? <BarraLateralMedicoMobile /> : <BarraLateralMedicoDesktop />
     )
 }

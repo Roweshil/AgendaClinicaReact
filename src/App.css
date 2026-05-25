@@ -121,18 +121,18 @@
 
 /* Estilos del Bar general */
 
-.medico-navbar {
+.navbar {
   background-color: #FFFF;
   color: #000000;
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.219);
   height: 10%;
 }
 
-.medico-navbar_title {
+.navbar_title {
   display: none;
 }
 
-.medico-navbar_buttons {
+.navbar__btns {
   display: flex;
   justify-content: space-evenly;
   list-style: none;
@@ -140,7 +140,7 @@
   margin: 0;
 }
 
-.medico-navbar_button {
+.navbar__btn {
   width: 20%;
 }
 
@@ -938,14 +938,7 @@
 
   /*  Contenedor global de la app */
 
-  .layout {
-
-  }
-
   /* Estilos del boton para pagina de tutoriales */
-
-
-  
 
   /* Estilos del header, se comparte en todas las paginas */
 
@@ -961,42 +954,51 @@
 
   /* Estilos del Bar general */
 
-  .medico-navbar {
+  .navbar {
     display: flex;
     flex-direction: column;
-    justify-content: start;
     border-right: 2px solid black;
-    width: 15dvw;
-    height: 100%;
+    width: 10dvw;
+    height: initial;
     background-color: #001C38;
     color: white;
   }
-
   
-
-  .medico-navbar_title {
+  .navbar__title {
     display: block;
     padding: 1rem;
   }
 
-  .medico-navbar_buttons {
+  .navbar__main {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
   }
 
-  .medico-navbar_button{
-    width: 100%;
+
+
+  .navbar__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .navbar__help {
+    margin-bottom: 2rem;
+  }
+
+  .navbar__btn{
+    width: 90%;
   }
 
   .bar-link {
     color: white;
-    text-align: start;
-    padding-left: 2rem;
   }
 
   .bar-link:visited {
     color: white;
-    text-align: start;
   }
   
   .bar-link:hover {
@@ -1196,32 +1198,22 @@
 
   /* Estilos de la lista de citas */
 
-  .medico-lista {
-    border-radius: 15px;
-  }
-
-  .medico-lista header {
-    border-bottom: 1px solid black;
-    border-radius: 15px 15px 0 0;
-  }
-
-  .medico-lista header section {
-    gap: 5rem;
-  }
-
-  .lista-citas {
-    max-height: 64dvh;
-  }
-
+ 
   /* Estilos de la creacion de citas */
 
   .crear-cita {
-    padding: 12rem 15rem;
+    padding: 2rem 1.5rem;
     border-radius: 15px;
   }
 
   .crear-cita section {
     padding: 1rem 2rem;
+  }
+
+  .crear__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 
   /* Estilos del Modal de confirmacion de borrado */
