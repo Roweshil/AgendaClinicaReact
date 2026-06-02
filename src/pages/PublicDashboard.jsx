@@ -11,9 +11,6 @@ export function PublicDashboard() {
                     <button className="btn btn--primario">Empezar a agendar</button>
                     <button className="btn btn--secundario">Ver Demo</button>
                 </section>
-                <section className="hero__image">
-                    <img src="https://imgs.search.brave.com/esmgfGpNHMcWTHh7IZbOge9Yi-CL1RAA3k8gAgTVGA8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMucGV4ZWxzLmNv/bS9waG90b3MvMjQy/NjM5NTQvcGV4ZWxz/LXBob3RvLTI0MjYz/OTU0L2ZyZWUtcGhv/dG8tb2YtcGVyc29u/YS1tYW5vLXRlbGVm/b25vLWludGVsaWdl/bnRlLXRlY25vbG9n/aWEuanBlZz9hdXRv/PWNvbXByZXNzJmNz/PXRpbnlzcmdiJmRw/cj0xJnc9NTAw" alt="" />
-                </section>
             </section>
             <section className="hero-banner">
                     <ul>
