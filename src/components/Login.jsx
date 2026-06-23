@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useAuth } from "../hooks/useAuth.js"
 import { useNavigate } from 'react-router-dom'
 import { createPortal } from "react-dom"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion" 
 
 export function Login() {
   const [confirmar, setConfirmar] = useState(false)
