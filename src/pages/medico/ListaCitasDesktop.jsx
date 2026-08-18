@@ -107,7 +107,7 @@ export function ListaCitasDesktop() {
                 </article>
                 
                 <section className="filtros">
-                    <div className="filtros-dia">
+                    <div className="filtros__btns">
                         {filtrosDia.map(filtro => (
                             <button
                             key={filtro.value}
@@ -119,7 +119,7 @@ export function ListaCitasDesktop() {
                         ))}
                     </div>
 
-                    <div className="filtros-estado">
+                    <div className="filtros__btns">
                         {filtrosEstado.map(filtro => (
                             <button
                             key={filtro.value}

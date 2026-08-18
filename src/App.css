@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'Titulos';
+  src: url('/fonts/Manrope-Medium.ttf') format('truetype'); /* Ajusta la ruta a tu archivo */
+  font-display: swap; /* Evita que el texto desaparezca mientras carga */
+
+}
+
+@font-face {
+  font-family: 'Texto';
+  src: url('/fonts/Manrope-Medium.ttf') format('truetype'); /* Ajusta la ruta a tu archivo */
+  font-weight: 400; 
+  font-style: normal;
+  font-display: swap; /* Evita que el texto desaparezca mientras carga */
+}
+
+h1,h2 {
+    font-family: 'Titulos';
+    margin: 0;
+}
+
+p {
+    font-family: 'Texto';
+}
+
 /* Contenedor global de la app */
 
 .layout {
@@ -48,8 +72,14 @@
 
 .splash-screen {
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
+  height: 90dvh;
+}
+
+/* Estilos de las transiciones */
+.page-transition {
+  height: 100%;
 }
 
 
@@ -264,12 +294,12 @@
 .medico-content {
   display: flex;
   flex-direction: column;
-  max-height: 94dvh;
+  height: 94dvh;
   justify-content: space-between;
 }
 
 .medico-dashboard  {
-  height: 88dvh;
+  height: 100%;
   overflow-y: auto; 
 }
 
@@ -492,18 +522,49 @@
 
 .filtros {
   display: flex;
-  gap: 1rem;
-  width: 100%;
-  background-color: white;
+  justify-content: space-between;
+  width: 60%;
   border-radius: 10px;
 }
 
-.filtros-estado {
-  /*TODO ajustar la visualizacion de filtros */
+.filtros-mobile {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.filtros-dia {
-  /*TODO ajustar la visualizacion de filtros */
+.filtros__btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.filtros-mobile__picklist {
+  width: 45%;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #ffffff;
+  background-color: #1a345c;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.filtros-mobile__picklist::after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  pointer-events: none; /* Permite hacer click a través de la flecha */
 }
 
 .filtro-dia__btn {
@@ -857,7 +918,7 @@
   text-align: center;
   gap: 2rem;
   padding: 10rem 0rem;
-  height: 88dvh;
+  height: 100%;
 }
 
 .not-found iframe {
@@ -926,6 +987,101 @@
 
 .features-desktop {
   display: none;
+}
+
+/* boton hamburguesa */
+.mobile-menu__toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-radius:5px;
+    cursor: pointer;
+    padding: 0;
+    background-color: rgba(246, 246, 248, 0.795);
+}
+ 
+.mobile-menu__toggle:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+ 
+.mobile-menu__bar {
+    width: 24px;
+    height: 2px;
+    background-color: currentColor;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+ 
+/* barra 1 gira a diagonal */
+.mobile-menu__bar.is-open:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+ 
+/* barra 2 desaparece */
+.mobile-menu__bar.is-open:nth-child(2) {
+    opacity: 0;
+}
+ 
+/* barra 3 gira a diagonal opuesta */
+.mobile-menu__bar.is-open:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+ 
+/* panel desplegable */
+.mobile-menu__panel {
+    position: absolute;
+    top: calc(100% + 12px);
+    width: 80dvw;
+    height: 40dvh;
+    background-color: #000000e5;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.25s ease, opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+    border: 1px solid rgba(187, 185, 212, 0.486);
+    z-index: 5;
+}
+ 
+.mobile-menu__panel.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+ 
+.mobile-menu__lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+    height: 100%;
+    padding: 0 2rem;
+    z-index: 10;
+
+}
+ 
+.mobile-menu__link {
+    padding: 12px 20px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 0.95rem;
+    transition: background-color 0.15s ease;
+    border: 1px solid gray;
+    border-radius: 15px;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+ 
+.mobile-menu__link:hover,
+.mobile-menu__link:focus-visible {
+    background-color: rgba(116, 48, 48, 0.945);
 }
 
 

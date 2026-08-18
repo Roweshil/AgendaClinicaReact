@@ -1,5 +1,6 @@
 import { useAuth } from '../../hooks/useAuth.js'
 import { useMedico } from '../../hooks/useMedico.js'
+import { MobileMenu } from '../../components/MobileMenu'
 
 export function HomeMobile() {
 
@@ -43,7 +44,7 @@ export function HomeMobile() {
     .filter(c => c.estado === 'confirmada')
 
     return(
-                <div className="home">
+        <div className="home">
                 <p className="home__name">¡Qué gusto verte {nombreCliente} {apellidoCliente}!</p>
                 { siguienteCitaHoy ? (
                     <section className="home__header">

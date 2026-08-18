@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  height: 100dvh;
-  width: 100dvw;
-}
-
 body {
   margin: 0;
   font-family: 'Manrope', 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;

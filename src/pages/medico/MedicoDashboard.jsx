@@ -29,7 +29,7 @@ export function MedicoDashboard() {
                         <section className="medico-dashboard">
                             <AnimatePresence mode="wait">
                                 <Routes location={location} key={location.pathname}>
-                                    <Route path="/" element={<Home />} />
+                                    <Route path="/" element={<PageTransition><Home /></PageTransition>} />
                                     <Route path="/lista" element={<PageTransition><ListaCitas /></PageTransition>} />
                                     <Route path="/detalle" element={<PageTransition><DetalleCita /></PageTransition>} />
                                     <Route path="/crear" element={<PageTransition><CrearCita /></PageTransition>} />

@@ -31,7 +31,7 @@ export function ListaCitasMobile() {
         { value: "todas", label: "Todas" },
         { value: "hoy", label: "Hoy" },
         { value: "manana", label: "Mañana" },
-        { value: "semana", label: "Próximos 5 días" }
+        { value: "semana", label: "Prox 5 días" }
     ]
 
     const filtrosEstado = [
@@ -106,30 +106,35 @@ export function ListaCitasMobile() {
                     <p>{citas.length} citas registradas.</p>
                 </article>
                 
-                <section className="filtros">
-                    <div className="filtros-dia">
-                        {filtrosDia.map(filtro => (
-                            <button
-                            key={filtro.value}
-                            className={filtros.dia === filtro.value ? "filtro-dia__btn activo " : "filtro-dia__btn"}
-                            onClick={() => dispatch({ type: "SET_DIA", payload: filtro.value })}
+                <section className="filtros-mobile">
+                        <select 
+                            className="filtros-mobile__picklist"
+                            value={filtros.dia}
+                            onChange={(e) => dispatch({ type: "SET_DIA", payload: e.target.value })}
+                        >
+                            {filtrosDia.map((filtro) => (
+                            <option 
+                                key={filtro.value} 
+                                value={filtro.value}
                             >
                                 {filtro.label}
-                            </button>
-                        ))}
-                    </div>
-
-                    <div className="filtros-estado">
-                        {filtrosEstado.map(filtro => (
-                            <button
-                            key={filtro.value}
-                            className={filtros.estado === filtro.value ? "filtro-estado__btn activo" : "filtro-estado__btn"}
-                            onClick={() => dispatch({ type: "SET_ESTADO", payload: filtro.value })}
+                            </option>
+                            ))}
+                        </select>
+                        <select 
+                            className="filtros-mobile__picklist"
+                            value={filtros.estado}
+                            onChange={(e) => dispatch({ type: "SET_ESTADO", payload: e.target.value })}
+                        >
+                            {filtrosEstado.map((filtro) => (
+                            <option 
+                                key={filtro.value} 
+                                value={filtro.value}
                             >
                                 {filtro.label}
-                            </button>
-                        ))}
-                    </div>
+                            </option>
+                            ))}
+                        </select>
                 </section>
             </header>
             <motion.div
